@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Function try_unserialize | Concourse PHP Driver</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Concourse PHP Driver</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li class="active">
+<span>Function</span>					</li>
+
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Concourse.html">Concourse</a></li>
+				<li><a href="class-Dictionary.html">Dictionary</a></li>
+				<li><a href="class-Link.html">Link</a></li>
+				<li><a href="class-Tag.html">Tag</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-array_fetch.html">array_fetch</a></li>
+				<li><a href="function-array_fetch_unset.html">array_fetch_unset</a></li>
+				<li><a href="function-benchmark.html">benchmark</a></li>
+				<li><a href="function-current_time_micros.html">current_time_micros</a></li>
+				<li><a href="function-current_time_millis.html">current_time_millis</a></li>
+				<li><a href="function-expand_path.html">expand_path</a></li>
+				<li><a href="function-get_caller.html">get_caller</a></li>
+				<li><a href="function-implode_all.html">implode_all</a></li>
+				<li><a href="function-implode_all_assoc.html">implode_all_assoc</a></li>
+				<li><a href="function-println.html">println</a></li>
+				<li class="active"><a href="function-try_unserialize.html">try_unserialize</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="function">
+	<h1>Function try_unserialize</h1>
+
+
+	<div class="description">
+	<p>Tests if an input is valid PHP serialized string.</p>
+
+<p>Checks if a string is serialized using quick string manipulation
+to throw out obviously incorrect strings. Unserialize is then run
+on the string to perform the final verification.</p>
+
+<p>Valid serialized forms are the following:</p>
+
+<ul>
+<li>boolean: <pre>b:<span class="php-num">1</span>;</pre></li>
+<li>integer: <pre>i:<span class="php-num">1</span>;</pre></li>
+<li>double: <pre>d:<span class="php-num">0.2</span>;</pre></li>
+<li>string: <pre>s:<span class="php-num">4</span>:<span class="php-quote">&quot;test&quot;</span>;</pre></li>
+<li>array: <pre>a:<span class="php-num">3</span>:{i:<span class="php-num">0</span>;i:<span class="php-num">1</span>;i:<span class="php-num">1</span>;i:<span class="php-num">2</span>;i:<span class="php-num">2</span>;i:<span class="php-num">3</span>;}</pre></li>
+<li>object: <pre>O:<span class="php-num">8</span>:<span class="php-quote">&quot;stdClass&quot;</span>:<span class="php-num">0</span>:{}</pre></li>
+<li>null: <pre>N;</pre></li>
+</ul>
+	</div>
+
+	<div class="alert alert-info">
+		
+		
+				<b>Copyright:</b>
+				Copyright (c) 2009 Chris Smith (http://www.cs278.org/)<br>
+				<b>License:</b>
+				<a href="http://sam.zoy.org/wtfpl/">WTFPL</a><br>
+				<b>Author:</b>
+				Chris Smith <a href="&#x6d;&#97;&#x69;&#108;t&#x6f;&#58;&#x63;&#111;&#100;&#x65;&#43;&#x70;&#104;&#112;&#x40;&#99;&#x68;&#x72;&#105;&#x73;&#46;c&#x73;&#50;&#x37;&#56;.&#x6f;&#114;&#x67;">&#x63;&#111;&#100;&#x65;&#43;&#x70;&#104;&#112;&#x40;&#99;&#x68;&#x72;&#105;&#x73;&#46;c&#x73;&#50;&#x37;&#56;.&#x6f;&#114;&#x67;</a><br>
+		<b>Located at</b>
+		<a href="source-function-try_unserialize.html#105-189" title="Go to source code">
+			extended_core.php
+		</a><br>
+	</div>
+
+
+	<div class="panel panel-default">
+        <div class="panel-heading"><h2>Parameters summary</h2></div>
+		<table class="summary table table-bordered table-striped" id="parameters">
+		<tr id="$value">
+			<td class="name"><code>string</code></td>
+			<td class="value"><code><var>$value</var></code></td>
+			<td>Value to test for serialized form</td>
+		</tr>
+		<tr id="$result">
+			<td class="name"><code>mixed</code></td>
+			<td class="value"><code><var>&amp; $result</var> = <span class="php-keyword1">null</span></code></td>
+			<td>Result of unserialize() of the $value</td>
+		</tr>
+		</table>
+	</div>
+
+	<div class="panel panel-default">
+        <div class="panel-heading"><h2>Return value summary</h2></div>
+		<table class="summary table table-bordered table-striped" id="returns">
+		<tr>
+			<td class="name"><code>
+				boolean
+			</code></td>
+			<td>
+				True if $value is serialized data, otherwise false
+			</td>
+		</tr>
+		</table>
+	</div>
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Concourse PHP Driver API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js?5aa015f8b28f6c07fd43b4705cb0b5ff07d01c58"></script>
+<script src="elementlist.js?2c4c9af2bd489cd81e0d237126458372e03679e0"></script>
+</body>
+</html>

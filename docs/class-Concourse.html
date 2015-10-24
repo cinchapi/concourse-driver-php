@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Concourse | Concourse PHP Driver</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">Concourse PHP Driver</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li class="active">
+<span>Class</span>					</li>
+
+
+
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-Concourse.html">Concourse</a></li>
+				<li><a href="class-Dictionary.html">Dictionary</a></li>
+				<li><a href="class-Link.html">Link</a></li>
+				<li><a href="class-Tag.html">Tag</a></li>
+			</ul>
+
+
+
+
+
+			<h3>Functions</h3>
+			<ul>
+				<li><a href="function-array_fetch.html">array_fetch</a></li>
+				<li><a href="function-array_fetch_unset.html">array_fetch_unset</a></li>
+				<li><a href="function-benchmark.html">benchmark</a></li>
+				<li><a href="function-current_time_micros.html">current_time_micros</a></li>
+				<li><a href="function-current_time_millis.html">current_time_millis</a></li>
+				<li><a href="function-expand_path.html">expand_path</a></li>
+				<li><a href="function-get_caller.html">get_caller</a></li>
+				<li><a href="function-implode_all.html">implode_all</a></li>
+				<li><a href="function-implode_all_assoc.html">implode_all_assoc</a></li>
+				<li><a href="function-println.html">println</a></li>
+				<li><a href="function-try_unserialize.html">try_unserialize</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class Concourse</h1>
+
+
+	<div class="description">
+	<p>Concourse is a self-tuning database that makes it easier for developers to
+quickly build robust and scalable systems. Concourse dynamically adapts on a
+per-application basis and offers features like automatic indexing, version
+control, and distributed ACID transactions within a big data platform that
+reduces operational complexity. Concourse abstracts away the management and
+tuning aspects of the database and allows developers to focus on what really
+matters.</p>
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		
+
+			<b>Located at</b> <a href="source-class-Concourse.html#15-881" title="Go to source code">Concourse.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="connect" id="_connect">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-Concourse.html">Concourse</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_connect">#</a>
+			<code><a href="source-class-Concourse.html#26-40" title="Go to source code">connect</a>( <span>string <var>$host</var> = <span class="php-quote">&quot;localhost&quot;</span></span>, <span>integer <var>$port</var> = <span class="php-num">1717</span></span>, <span>string <var>$username</var> = <span class="php-quote">&quot;admin&quot;</span></span>, <span>string <var>$password</var> = <span class="php-quote">&quot;admin&quot;</span></span>, <span>string <var>$environment</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+
+			<div class="description short">
+				<p>Create a new client connection.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create a new client connection.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$host</var></dt>
+						<dd>the server host (optional, defaults to 'localhost')</dd>
+						<dt><var>$port</var></dt>
+						<dd>the listener port (optional, defaults to 1717)</dd>
+						<dt><var>$username</var></dt>
+						<dd>the username with which to connect (optional, defaults to 'admin')</dd>
+						<dt><var>$password</var></dt>
+						<dd>the password for the username (optional, defaults to 'admin')</dd>
+						<dt><var>$environment</var></dt>
+						<dd>the environment to use (optional, defaults to the 'value of the default_environment' variable in the server's concourse.prefs file</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-Concourse.html">Concourse</a></code>
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						Exception<br>if the connection cannot be established
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="abort" id="_abort">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_abort">#</a>
+			<code><a href="source-class-Concourse.html#122-133" title="Go to source code">abort</a>( )</code>
+
+			<div class="description short">
+				<p>Abort the current transaction and discard any changes that were staged.
+After returning, the driver will return to autocommit mode and all
+subsequent changes will be committed immediately.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Abort the current transaction and discard any changes that were staged.
+After returning, the driver will return to autocommit mode and all
+subsequent changes will be committed immediately.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="add" id="_add">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|array|integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_add">#</a>
+			<code><a href="source-class-Concourse.html#135-152" title="Go to source code">add</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Add a value if it doesn't already exist.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Add a value if it doesn't already exist.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$value</var>,…</dt>
+						<dd>the value to add</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>The record where the data should be added (optional)</dd>
+						<dt><var>$records</var>,…</dt>
+						<dd>The records where the data should be added (optional)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|array|integer
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						Thrift\Exceptions\InvalidArgumentException
+					</div>
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>add($key, $value, $record)</strong> - Add a value to a field in a single record and return a flag that indicates whether the value was added to the field</li>
+<li><strong>add($key, $value, $records)</strong> - Add a value to a field in multiple records and return a mapping from each record to a boolean flag that indicates whether the value was added to the field</li>
+<li><strong>add($key, $value)</strong> - Add a value to a field in a new record and return the id of the new record</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="audit" id="_audit">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_audit">#</a>
+			<code><a href="source-class-Concourse.html#154-173" title="Go to source code">audit</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Describe changes made to a record or a field over time.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Describe changes made to a record or a field over time.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name (optional)</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record that contains the $key field or the record to audit if no $key is provided</dd>
+						<dt><var>$start</var>,…</dt>
+						<dd>the earliest timestamp to check (optional)</dd>
+						<dt><var>$end</var>,…</dt>
+						<dd>the latest timestamp to check (optional)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>mapping from each timestamp to a description of the change that occurred.
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>audit($key, $record)</strong> - Describe all the changes made to a field over time.</li>
+<li><strong>audit($key, $record, $start)</strong> - Describe all the changes made to a field since the specified <em>start</em> timestamp.</li>
+<li><strong>audit($key, $record, $start, $end)</strong> - Describe all the changes made to a field between the specified <em>start</em> and <em>end</em> timestamps.</li>
+<li><strong>audit($record)</strong> - Describe all the changes made to a record over time.</li>
+<li><strong>audit($record, $start)</strong> - Describe all the changes made to a record since the specified <em>start</em> timestamp.</li>
+<li><strong>audit($record, $start, $end)</strong> - Describe all the changes made to a record between the specified <em>start</em> and <em>end</em> timestamps.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="browse" id="_browse">
+
+			<td class="attributes"><code>
+				 public 
+				ArrayAccess
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_browse">#</a>
+			<code><a href="source-class-Concourse.html#175-191" title="Go to source code">browse</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$keys</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>View the values that have been indexed.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>View the values that have been indexed.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>a single field name (optional: either $key or $keys is required)</dd>
+						<dt><var>$keys</var>,…</dt>
+						<dd>an array of field names (optional: either $key or $keys is required)</dd>
+						<dt><var>$timestamp</var>,…</dt>
+						<dd>the timestamp to use when browsing the index (optional)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						ArrayAccess
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>browse($key)</strong> - View that values that are indexed for <em>key</em> and return an array of records where the value is contained in the field.</li>
+<li><strong>browse($key, $timestamp)</strong> - View that values that were indexed for <em>key</em> at <em>timestamp</em> and return an array of records where the value was contained in the field.</li>
+<li><strong>browse($keys)</strong> - View the values that are indexed for each of the <em>keys</em> and return an array mapping each <em>key</em> to an array of records where the value is contained in the field.</li>
+<li><strong>browse($keys, $timestamp)</strong> - View the values that were indexed for each of the <em>keys</em> at <em>timestamp</em> and return an array mapping each <em>key</em> to an arra of records where the value was contained in the field.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="chronologize" id="_chronologize">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_chronologize">#</a>
+			<code><a href="source-class-Concourse.html#193-209" title="Go to source code">chronologize</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|String <var>$end</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Return a timeseries that shows the state of a field after each change.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return a timeseries that shows the state of a field after each change.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record that contains the field</dd>
+						<dt><var>$start</var>,…</dt>
+						<dd>the first timestamp to include in the timeseries (optional)</dd>
+						<dt><var>$end</var>,…</dt>
+						<dd>the last timestamp to include in the timeseries (optional)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>mapping a timestamp to an array that contains all the values that were contained in the field at that timestamp
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>chronologize($key, $record)</strong> - Return a timeseries that shows the state of of a field after every change.</li>
+<li><strong>chronologize($key, $record, $start)</strong> - Return a timeseries that shows the state of the field after every change since <em>$start</em>.</li>
+<li><strong>chronologize($key, $record, $start, $end)</strong> - Return a timeseries that shows the state of the field after every change between <em>$start</em> and <em>$end</em>.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="clear" id="_clear">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_clear">#</a>
+			<code><a href="source-class-Concourse.html#211-229" title="Go to source code">clear</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Atomically remove all the values from one or more fields or one or more records.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Atomically remove all the values from one or more fields or one or more records.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the name of the field to clear</dd>
+						<dt><var>$keys</var>,…</dt>
+						<dd>a collection of fields to clear</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record that contains the field/s or itself in entirety to clear</dd>
+						<dt><var>$records</var>,…</dt>
+						<dd>a collection of records that contain the field/s or  themselves in entirety to clear</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>clear($key, $record)</strong> - Atomically remove all the values from a field in a single record.</li>
+<li><strong>clear($key, $records)</strong> - Atomically remove all the values from a field in multiple records.</li>
+<li><strong>clear($keys, $record)</strong> - Atomically remove all the values from multiple fields in a single record.</li>
+<li><strong>clear($keys, $records)</strong> - Atomically remove all the values from multiple fields in multiple records.</li>
+<li><strong>clear($record)</strong> - Atomically remove all the values from a single record.</li>
+<li><strong>clear($records)</strong> - Atomically remove all the values from multiple records.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="close" id="_close">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_close">#</a>
+			<code><a href="source-class-Concourse.html#231-237" title="Go to source code">close</a>( )</code>
+
+			<div class="description short">
+				<p>Close the client connection.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Close the client connection.</p>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="commit" id="_commit">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_commit">#</a>
+			<code><a href="source-class-Concourse.html#239-253" title="Go to source code">commit</a>( )</code>
+
+			<div class="description short">
+				<p>Commit the currently running transaction.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Commit the currently running transaction.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br>that indicates if the transaction successfully committed
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						Cinchapi\Concourse\Thrift\Exceptions\TransactionException
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="describe" id="_describe">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_describe">#</a>
+			<code><a href="source-class-Concourse.html#255-271" title="Go to source code">describe</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Describe the fields that exist.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Describe the fields that exist.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$record</var>,…</dt>
+						<dd>the single record to describe (either $record or $records is required)</dd>
+						<dt><var>$records</var>,…</dt>
+						<dd>the collection of records to describe (either $record or $records is required)</dd>
+						<dt><var>$timestamp</var>,…</dt>
+						<dd>the timestamp to use when describe the record/s (optional)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>describe($record)</strong> - Return all the keys in the <em>record</em>.</li>
+<li><strong>describe($record, $timestamp)</strong> - Return all the keys that were in the <em>record</em> at <em>timestamp</em>.</li>
+<li><strong>describe($records)</strong> - Return an array mapping each of the <em>records</em> to the array of keys that are in each record.</li>
+<li><strong>describe($records, $timestamp)</strong> - Return an array mapping each of the <em>records</em> to the array of keys that were in each record at <em>timestamp</em>.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="diff" id="_diff">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_diff">#</a>
+			<code><a href="source-class-Concourse.html#273-292" title="Go to source code">diff</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Return the differences in data between two timestamps.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the differences in data between two timestamps.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field or index name</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record that contains the field or the record to diff</dd>
+						<dt><var>$start</var>,…</dt>
+						<dd>the timestamp of the original state</dd>
+						<dt><var>$end</var>,…</dt>
+						<dd>the timestamp of the changed state</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>mapping a description of a changed (ADDED or REMOVED) to an array of values that match the change
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>diff($key, $record, $start)</strong> - Return the differences in the field between the <em>start</em> timestamp and the present.</li>
+<li><strong>diff($key, $record, $start, $end)</strong> - Return the differences in the field between the <em>start</em> and <em>end</em> timestamps.</li>
+<li><strong>diff($key, $start)</strong> - Return the differences in the index between the <em>start</em> timestamp and the present.</li>
+<li><strong>diff($key, $start, $end)</strong> - Return the differences in the index between the <em>start</em> and <em>end</em> timestamps.</li>
+<li><strong>diff($record, $start)</strong> - Return the differences in the record between the <em>start</em> timestamp and the present.</li>
+<li><strong>diff($record, $start, $end)</strong> - Return the differences in the record between the <em>start</em> and <em>end</em> timestamps.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="find" id="_find">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_find">#</a>
+			<code><a href="source-class-Concourse.html#294-314" title="Go to source code">find</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>Cinchapi\Concourse\Thrift\Shared\Operator|string <var>$operator</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>mixed <var>$values</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Find the records that match a criteria.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find the records that match a criteria.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field/index name</dd>
+						<dt><var>$keys</var>,…</dt>
+						<dd>the collection of field/index names</dd>
+						<dt><var>$operator</var>,…</dt>
+						<dd>The criteria operator</dd>
+						<dt><var>$value</var>,…</dt>
+						<dd>the criteria value</dd>
+						<dt><var>$values</var>,…</dt>
+						<dd>the criteria values</dd>
+						<dt><var>$timestamp</var>,…</dt>
+						<dd>the timestamp to use when evaluating the criteria</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>the records that match
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>find($key, $operator, $value)</strong> - Find the records where the <em>key</em> field contains at least one value that satisfies <em>operator</em> in relation to <em>value</em>.</li>
+<li><strong>find($key, $operator, $values)</strong> - Find the records where the <em>key</em> field contains at least one value that satisfies <em>operator</em> in relation to the <em>values</em>.</li>
+<li><strong>find($timestamp, $key, $operator, $value)</strong> - Find the records where the <em>key</em> field contained at least one value that satisifed <em>operator</em> in relation to <em>value</em> at <em>timestamp</em>.</li>
+<li><strong>find($timestamp, $key, $operator, $values)</strong> - Find the records where the <em>key</em> field contained at least one value that satisifed <em>operator</em> in relation to the <em>values</em> at <em>timestamp</em>.</li>
+<li><strong>find(criteria)</strong> - Find the records that match the <em>criteria</em>.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="findOrAdd" id="_findOrAdd">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findOrAdd">#</a>
+			<code><a href="source-class-Concourse.html#316-338" title="Go to source code">findOrAdd</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Find and return the unique record where the <em>key</em> equals
+<em>value</em>, if it exists. If no record matches, then add <em>key</em>
+as <em>value</em> in a new record and return the id. If multiple records match the condition, a DuplicateEntryException is thrown.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find and return the unique record where the <em>key</em> equals
+<em>value</em>, if it exists. If no record matches, then add <em>key</em>
+as <em>value</em> in a new record and return the id. If multiple records match the condition, a DuplicateEntryException is thrown.</p>
+
+<p>This method can be used to simulate a unique index because it atomically
+checks for a condition and only adds data if the condition isn't
+currently satisified. If you want to simulate a unique compound index,
+see the #findOrInsert method, which lets you check a complex criteria.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$value</var>,…</dt>
+						<dd>the value to find for <em>key</em> or add in a new record</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The unique record where <em>key</em> = <em>value</em>, if it exists or the new record where <em>key</em> as <em>value</em> is added.
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						Thrift\Exceptions\DuplicateEntryException
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="findOrInsert" id="_findOrInsert">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_findOrInsert">#</a>
+			<code><a href="source-class-Concourse.html#340-368" title="Go to source code">findOrInsert</a>( <span>string <var>$criteria</var>,…</span>, <span>mixed <var>$data</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Find and return the unique record that matches the <em>criteria</em>, if
+it exists. If no record matches, then insert <em>data</em> in a new
+record and return the id. If multiple records match the
+<em>criteria</em>, a DuplicateEntryException is thrown.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Find and return the unique record that matches the <em>criteria</em>, if
+it exists. If no record matches, then insert <em>data</em> in a new
+record and return the id. If multiple records match the
+<em>criteria</em>, a DuplicateEntryException is thrown.</p>
+
+<p>This method can be used to simulate a unique index because it atomically
+checks for a condition and only adds data if the condition isn't
+currently satisified.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$criteria</var>,…</dt>
+						<dd>the unique criteria to find</dd>
+						<dt><var>$data</var>,…</dt>
+						<dd>the data to insert if the criteria is not uniquely found</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>The unique record that matches the <em>criteria</em>, if it exists or the new record where <em>data</em> is inserted.
+					</div>
+
+					<h4>Throws</h4>
+					<div class="list">
+						Thrift\Exceptions\DuplicateEntryException
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="get" id="_get">
+
+			<td class="attributes"><code>
+				 public 
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_get">#</a>
+			<code><a href="source-class-Concourse.html#370-397" title="Go to source code">get</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>string <var>$criteria</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Get the most recently added value/s.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Get the most recently added value/s.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$keys</var>,…</dt>
+						<dd>the collection of multiple field names</dd>
+						<dt><var>$criteria</var>,…</dt>
+						<dd>the criteria that determines the record from which data is retrieved</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record from which data is retrieved</dd>
+						<dt><var>$records</var>,…</dt>
+						<dd>the collection of muliple records from which data is retrieved</dd>
+						<dt><var>$timestamp</var>,…</dt>
+						<dd>the timestamp to use when getting data</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						mixed
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>get($criteria)</strong> - Return the most recently added value from all the fields in every record that matches the <em>criteria</em> as array[record => array[key => value]].</li>
+<li><strong>get($criteria, $timestamp)</strong> - Return the most recently added value from all the fields at <em>timestamp</em> in every record at that matches the <em>criteria</em> as array[record => array[key => value]].</li>
+<li><strong>get($key, $criteria)</strong> - Return the most recently added value from the <em>key</em> field in every record that matches the <em>criteria</em> as array[record => value].</li>
+<li><strong>get($key, $criteria, $timestamp)</strong> - Return the most recently added value from the <em>key</em> field at <em>timestamp</em> in every record that matches the <em>criteria</em>. as an array[record => value].</li>
+<li><strong>get($keys, $criteria)</strong> - Return the most recently added value from each of the <em>keys</em> fields in every record that matches the <em>criteria</em> as array[record => array[key => value]].</li>
+<li><strong>get($keys, $criteria, $timestamp)</strong> - Return the most recently added value from each of the <em>keys</em> fields at <em>timestamp</em> from every record that matches the <em>criteria</em> as array[record => array[key => value]].</li>
+<li><strong>get($key, $record)</strong> - Return the most recently added value from the <em>key</em> field in <em>record</em>.</li>
+<li><strong>get($key, $record, $timestamp)</strong> - Return the most recently added value from the <em>key</em> field in <em>record</em> at <em>timestamp</em>.</li>
+<li><strong>get($keys, $record)</strong> - Return the most recently added value from each of the <em>keys</em> fields in <em>record</em> as array[key => value].</li>
+<li><strong>get($keys, $record, $timestamp)</strong> - Return the most recently added value from each of the <em>keys</em> fields in <em>record</em> at <em>timestamp</em> as array[key => value].</li>
+<li><strong>get($keys, $records)</strong> - Return the most recently added value from each of the <em>keys</em> fields in each of the <em>records</em> as array[record => array[key => value]].</li>
+<li><strong>get($keys, $records, $timestamp)</strong> - Return the most recently added values from each of the <em>keys</em> fields in each of the <em>records</em> at <em>timestamp</em> as array[record => array[key => value]].</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getServerEnvironment" id="_getServerEnvironment">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getServerEnvironment">#</a>
+			<code><a href="source-class-Concourse.html#399-406" title="Go to source code">getServerEnvironment</a>( )</code>
+
+			<div class="description short">
+				<p>Return the environment to which the client is connected.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the environment to which the client is connected.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>the server environment associated with this connection
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getServerVersion" id="_getServerVersion">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getServerVersion">#</a>
+			<code><a href="source-class-Concourse.html#408-417" title="Go to source code">getServerVersion</a>( )</code>
+
+			<div class="description short">
+				<p>Return the version of Concourse Server to which the client is
+connected. Generally speaking, a client cannot talk to a newer version of
+Concourse Server.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the version of Concourse Server to which the client is
+connected. Generally speaking, a client cannot talk to a newer version of
+Concourse Server.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>the server version
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="insert" id="_insert">
+
+			<td class="attributes"><code>
+				 public 
+				array|boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_insert">#</a>
+			<code><a href="source-class-Concourse.html#419-437" title="Go to source code">insert</a>( <span>mixed <var>$data</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Atomically bulk insert data. This operation is atomic within each record,
+which means that an insert will only succeed in a record if all the data
+can be successfully added. Therefore, an insert will fail in a record if
+any of the insert data is already contained.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Atomically bulk insert data. This operation is atomic within each record,
+which means that an insert will only succeed in a record if all the data
+can be successfully added. Therefore, an insert will fail in a record if
+any of the insert data is already contained.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$data</var>,…</dt>
+						<dd>the data to insert</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record into which the data is inserted</dd>
+						<dt><var>$records</var>,…</dt>
+						<dd>the records into which the data is inserted</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array|boolean
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>insert($data)</strong> - Insert <em>data</em> into one or more new records and return an array of all the new record ids.</li>
+<li><strong>insert($data, $record)</strong> - Insert <em>data</em> into <em>record</em> and return <em>true</em> if the operation is successful.</li>
+<li><strong>insert($data, $records)</strong> - Insert <em>data</em> into each of the <em>records</em> and return an array mapping each record id ot a boolean flag that indicates if the insert was sucessful in that record.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="inventory" id="_inventory">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_inventory">#</a>
+			<code><a href="source-class-Concourse.html#439-446" title="Go to source code">inventory</a>( )</code>
+
+			<div class="description short">
+				<p>Return all the records that have current or historical data.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return all the records that have current or historical data.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>all the record ids
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="jsonify" id="_jsonify">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_jsonify">#</a>
+			<code><a href="source-class-Concourse.html#448-490" title="Go to source code">jsonify</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span>, <span>boolean <var>$includeId</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Export data as a JSON string.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Export data as a JSON string.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$record</var>,…</dt>
+						<dd>the id of the record to dump</dd>
+						<dt><var>$records</var>,…</dt>
+						<dd>an array containing the ids of all the records to dump</dd>
+						<dt><var>$timestamp</var>,…</dt>
+						<dd>the timestamp to use when selecting the data to dump</dd>
+						<dt><var>$includeId</var>,…</dt>
+						<dd>a flag that determines whether record ids are included in the data dump</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>the data encoded as a JSON string
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>jsonify($record)</strong> - Return a JSON string that contains all the data in <em>record</em>.</li>
+<li><strong>jsonify($record, $timestamp)</strong> - Return a JSON string that contains all the data in <em>record</em> at <em>timestamp</em>.</li>
+<li><strong>jsonify($record, $includeId)</strong> - Return a JSON string that contains all the data in <em>record</em> and optionally include the record id  in the dump. This option is useful for dumping data from one instance and importing into another.</li>
+<li><strong>jsonify($record, $timestamp, $includeId)</strong> - Return a JSON string that contains all the data in <em>record</em> at <em>timestamp</em> and optionally include the record id  in the dump. This option is useful for dumping data from one instance and importing into another.</li>
+<li><strong>jsonify($records)</strong> - Return a JSON string that contains all the data in each of the <em>records</em>.</li>
+<li><strong>jsonify($records, $timestamp)</strong> - Return a JSON string that contains all the data in each of the <em>records</em> at <em>timestamp</em>.</li>
+<li><strong>jsonify($records, $includeId)</strong> - Return a JSON string that contains all the data in each of the <em>records</em> and optionally include the record id  in the dump. This option is useful for dumping data from one instance and importing into another.</li>
+<li><strong>jsonify($records, $timestamp, $includeId)</strong> - Return a JSON string that contains all the data in each of the <em>records</em> at <em>timestamp</em> and optionally include the record id  in the dump. This option is useful for dumping data from one instance and importing into another.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="link" id="_link">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_link">#</a>
+			<code><a href="source-class-Concourse.html#492-525" title="Go to source code">link</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Add a link from a field in the <em>source</em> to one or more <em>destination</em> records.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Add a link from a field in the <em>source</em> to one or more <em>destination</em> records.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$source</var>,…</dt>
+						<dd>the source record</dd>
+						<dt><var>$destination</var>,…</dt>
+						<dd>the destination record</dd>
+						<dt><var>$destinations</var>,…</dt>
+						<dd>the destination records</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|array
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>link($key, $source, $destination)</strong> - Add a link from the <em>key</em> field in the <em>source</em> record to the <em>destination</em> record.</li>
+<li><strong>link($key, $source, $destinations)</strong> - Add a link from the <em>key</em> field in the <em>source</em> record to the each of the  <em>destinations</em>.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="ping" id="_ping">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_ping">#</a>
+			<code><a href="source-class-Concourse.html#537-550" title="Go to source code">ping</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Check if data currently exists.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Check if data currently exists.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record to ping</dd>
+						<dt><var>$records</var>,…</dt>
+						<dd>the records to ping</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|array
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>ping($record)</strong> - Return a boolean that indicates whether the <em>record</em> has any data.</li>
+<li><strong>ping($records)</strong> - Return an arry that maps each of the <em>records</em> to a boolean that indicates whether the record currently has any data.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="remove" id="_remove">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_remove">#</a>
+			<code><a href="source-class-Concourse.html#552-567" title="Go to source code">remove</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Remove a value if it exists.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Remove a value if it exists.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$value</var>,…</dt>
+						<dd>the value to remove from the field</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record that contains the field</dd>
+						<dt><var>$records</var>,…</dt>
+						<dd>the records that contain the field</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|array
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>remove($key, $value, $record)</strong> - Remove a value from a field in a single record.</li>
+<li><strong>remove($key, $value, $records)</strong> - Remove a value from a field in multiple records.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="revert" id="_revert">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_revert">#</a>
+			<code><a href="source-class-Concourse.html#569-586" title="Go to source code">revert</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Atomically return data to a previous state.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Atomically return data to a previous state.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$keys</var>,…</dt>
+						<dd>the field names</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record that contains the field/s</dd>
+						<dt><var>$records</var>,…</dt>
+						<dd>the records that contain the field/s</dd>
+						<dt><var>$timestamp</var>,…</dt>
+						<dd>the timestamp of the state to restore</dd>
+					</dl></div>
+
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>revert($key, $record, $timestamp)</strong> - Revert the <em>key</em> in <em>record</em> to its state at <em>timestamp</em>.</li>
+<li><strong>revert($keys, $record, $timestamp)</strong> - Revert each of the <em>keys</em> in <em>record</em> to their state at <em>timestamp</em>.</li>
+<li><strong>revert($key, $records, $timestamp)</strong> - Revert the <em>key</em> in each of the <em>records</em> to its state at <em>timestamp</em>.</li>
+<li><strong>revert($keys, $records, $timestamp)</strong> - Revert each of the <em>keys</em> in each of the <em>records</em> to their state at <em>timestamp</em>.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="search" id="_search">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_search">#</a>
+			<code><a href="source-class-Concourse.html#588-606" title="Go to source code">search</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$query</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Search for all the records that have at a value in the <em>key</em> field that fully or partially matches the <em>query</em>.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Search for all the records that have at a value in the <em>key</em> field that fully or partially matches the <em>query</em>.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$query</var>,…</dt>
+						<dd>the search query to match</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array<br>the records that match
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="select" id="_select">
+
+			<td class="attributes"><code>
+				 public 
+				array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_select">#</a>
+			<code><a href="source-class-Concourse.html#608-639" title="Go to source code">select</a>( <span>string <var>$criteria</var>,…</span>, <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Select all values.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Select all values.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$criteria</var>,…</dt>
+						<dd>a CCL filter that determines from which records to select data (required if $record and $records is unspecified)</dd>
+						<dt><var>$key</var>,…</dt>
+						<dd>a key from which to select values (optional)</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>a record from which to select data (required if $criteria and $records is unspecified)</dd>
+						<dt><var>$timestamp</var>,…</dt>
+						<dd>the timestamp to use when selecting data (optional)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						array
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>select($criteria)</strong> - Return all the data from every record that matches the <em>criteria</em> as an Array[record => Array[key => Array[values]]].</li>
+<li><strong>select($criteria, $timestamp)</strong> - Return all the data at <em>timestamp</em> from every record that matches the <em>criteria</em> as an Array[record => Array[key => Array[values]]].</li>
+<li><strong>select($key, $criteria)</strong> - Return all the values from <em>key</em> in all the records that match the <em>criteria</em> as an Array[record => Array[values]].</li>
+<li><strong>select($key, $criteria, $timestamp)</strong> - Return all the values from <em>key</em> at <em>timestamp</em> in all the records that match the <em>criteria</em> as an Array[record => Array[values]].</li>
+<li><strong>select($keys, $criteria)</strong> - Return all the values from each of the <em>keys</em> in all the records that match <em>criteria</em> as an Array[record => Array[key => Array[values]]].</li>
+<li><strong>select($keys, $criteria, $timestamp)</strong> - Return all the values from each of the <em>keys</em> at <em>timestamp</em> in all the records that match <em>criteria</em> as an Array[record => Array[key => Array[values]]].</li>
+<li><strong>select($key, $record)</strong> - Return all the values from <em>key</em> in <em>record</em>.</li>
+<li><strong>select($key, $record, $timestamp)</strong> - Return all the values from <em>key</em> in <em>record</em> at <em>timestamp</em>.</li>
+<li><strong>select($keys, $record)</strong> - Return all the values from each of the <em>keys</em> in <em>record</em> as an Array[key => Array[values]].</li>
+<li><strong>select($keys, $record, $timestamp)</strong> - Return all the values from each of the <em>keys</em> in <em>record</em> at <em>timestamp</em> as an Array[key => Array[values]].</li>
+<li><strong>select($keys, $records)</strong> - Return all the values from each of the <em>keys</em> in each of the <em>records/em> as an Array[record => Array[key => Array[values]]].</li>
+<li><strong>select($key, $records, $timestamp)</strong> - Return all the values from each of the <em>keys</em> in each of the <em>records/em> at <em>timestamp</em> as an Array[record => Array[key => Array[values]]].</li>
+<li><strong>select($record)</strong> - Return all the values from every key in <em>record</em> as an Array[key => Array[values]].</li>
+<li><strong>select($record, $timestamp)</strong> - Return all the values from every key in <em>record</em> at <em>timestamp</em> as an Array[key => Array[values]].</li>
+<li><strong>select($records)</strong> - Return all the values from every key in each of the <em>records</em> as an Array[record => Array[key => Array[values]]].</li>
+<li><strong>select($records, $timestamp)</strong> - Return all the values from every key in each of the <em>records</em> at <em>timestamp</em> as an Array[record => Array[key => Array[values]]].</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="set" id="_set">
+
+			<td class="attributes"><code>
+				 public 
+				|integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_set">#</a>
+			<code><a href="source-class-Concourse.html#641-657" title="Go to source code">set</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Atomically remove all existing values from a field and add a new one.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Atomically remove all existing values from a field and add a new one.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$value</var>,…</dt>
+						<dd>the value to add to the field</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record in which to set $value for $key (optional)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						|integer
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>set($key, $value, $record)</strong> - Atomically remove all the values from <em>key</em> in <em>record</em> and add <em>value</em>.</li>
+<li><strong>set($key, $value, $records)</strong> - Atomically remove all the values from <em>key</em> in each of the <em>records</em> and add <em>value</em>.</li>
+<li><strong>set($key, $value)</strong> - Add <em>key</em> as <em>value</em> in a new record and return the id.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="stage" id="_stage">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_stage">#</a>
+			<code><a href="source-class-Concourse.html#659-714" title="Go to source code">stage</a>( <span> <var>$lambda</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				<p>Start a new transaction.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Start a new transaction.</p>
+
+<p>This method will turn on <em>staging</em> mode so that all subsequent
+changes are collected in an isolated buffer before possibly being
+committed. Staged operations are guaranteed to be reliable, all or
+nothing, units of work that allow correct recovery from failures and
+provide isolation between clients so the database is always consistent.</p>
+
+<p>After this method returns, all subsequent operations will be done in
+<em>staging<em> mode until either #commit or #abort is called.</p>
+
+<p>All operations that occur within a transaction should be wrapped in a
+try-catch block so that transaction exceptions can be caught and the
+application can decided to abort or retry the transaction:</p>
+
+<pre><span class="php-var">$concourse</span>-&gt;stage();
+    <span class="php-keyword1">try</span> {
+        <span class="php-var">$concourse</span>-&gt;get([<span class="php-quote">&quot;key&quot;</span> =&gt; <span class="php-quote">&quot;name&quot;</span>, <span class="php-quote">&quot;record&quot;</span> =&gt; <span class="php-num">1</span>]);
+        <span class="php-var">$concourse</span>-&gt;add(<span class="php-quote">&quot;name&quot;</span>, <span class="php-quote">&quot;Jeff Nelson&quot;</span>, <span class="php-num">1</span>);
+        <span class="php-var">$concourse</span>-&gt;commit();
+    }
+    <span class="php-keyword1">catch</span>(Cinchapi\Concourse\Thrift\Exceptions\TransactionException <span class="php-var">$e</span>) {
+        <span class="php-var">$concourse</span>-&gt;abort();
+    }</pre>
+
+<p>Alternatively, if you supply a block to this method, starting and
+committing the transactions happens automatically and there is also
+automatic logic to gracefully handle exceptions that may result from
+any of the actions in the transaction.</p>
+
+<pre><span class="php-var">$concourse</span>-&gt;stage(<span class="php-keyword1">function</span>() <span class="php-keyword1">use</span>(<span class="php-var">$concourse</span>){
+        <span class="php-var">$concourse</span>-&gt;get([<span class="php-quote">&quot;key&quot;</span> =&gt; <span class="php-quote">&quot;name&quot;</span>, <span class="php-quote">&quot;record&quot;</span> =&gt; <span class="php-num">1</span>]);
+        <span class="php-var">$concourse</span>-&gt;add(<span class="php-quote">&quot;name&quot;</span>, <span class="php-quote">&quot;Jeff Nelson&quot;</span>, <span class="php-num">1</span>);
+    });</pre>
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="time" id="_time">
+
+			<td class="attributes"><code>
+				 public 
+				integer
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_time">#</a>
+			<code><a href="source-class-Concourse.html#716-724" title="Go to source code">time</a>( <span>string <var>$phrase</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Return the server's unix timestamp in microseconds. The precision of the timestamp is subject to network latency.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return the server's unix timestamp in microseconds. The precision of the timestamp is subject to network latency.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$phrase</var>,…</dt>
+						<dd>a natural language phrase that describes the desired timestamp (i.e. 3 weeks ago, last month, yesterday at 3:00pm, etc) (optional)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>a unix timestamp in microseconds
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unlink" id="_unlink">
+
+			<td class="attributes"><code>
+				 public 
+				boolean|array
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unlink">#</a>
+			<code><a href="source-class-Concourse.html#726-759" title="Go to source code">unlink</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Remove the link from a key in the <em>source</em> to one or more <em>destination</em> records.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Remove the link from a key in the <em>source</em> to one or more <em>destination</em> records.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$source</var>,…</dt>
+						<dd>the source record</dd>
+						<dt><var>$destination</var>,…</dt>
+						<dd>the destination record (required if $destinations is unspecified)</dd>
+						<dt><var>$destinations</var>,…</dt>
+						<dd>the destination records (required if $destination is unspecified)</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean|array
+					</div>
+
+
+					<h4>Api</h4>
+					<div class="list">
+							<ul>
+<li><strong>unlink($key, $source, $destination)</strong> - Remove the link from the <em>key</em> in the <em>source</em> record to the <em>destination</em> record.</li>
+<li><strong>unlink($key, $source, $destinations)</strong> - Remove the link from the <em>key</em> in the <em>source</em> record to the each of the  <em>destinations</em>.</li>
+</ul><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="verify" id="_verify">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_verify">#</a>
+			<code><a href="source-class-Concourse.html#761-763" title="Go to source code">verify</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="verifyAndSwap" id="_verifyAndSwap">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_verifyAndSwap">#</a>
+			<code><a href="source-class-Concourse.html#765-793" title="Go to source code">verifyAndSwap</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>mixed <var>$replacement</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Atomically verify the existence of a <em>value</em> for a <em>key</em>
+within a <em>record</em> and swap that value with a <em>replacement</em>
+one.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Atomically verify the existence of a <em>value</em> for a <em>key</em>
+within a <em>record</em> and swap that value with a <em>replacement</em>
+one.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$value</var>,…</dt>
+						<dd>the value for which the verify is performed</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record that contains the field</dd>
+						<dt><var>$replacement</var>,…</dt>
+						<dd>the value to for which the original is swapped</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean<br><em>true</em> if and only if both the verification and swap are successful
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="verifyOrSet" id="_verifyOrSet">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_verifyOrSet">#</a>
+			<code><a href="source-class-Concourse.html#795-828" title="Go to source code">verifyOrSet</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
+
+			<div class="description short">
+				<p>Atomically verify that a field contains a single particular value or set
+it as such.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Atomically verify that a field contains a single particular value or set
+it as such.</p>
+
+<p>Please note that after returning, this method guarantees that
+<em>key</em> in <em>record</em> will only contain <em>value</em>, even if
+it already existed alongside other values (e.g. calling
+concourse.verifyOrSet("foo", "bar", 1) will mean that "foo" in record 1
+will only have "bar" as a value after returning, even if the field
+already contained "bar", "baz" and "apple" as values.</p>
+
+<p>Basically, this method has the same guarantee as the [#set] method,
+except it will not create any new revisions unless it is necessary to do
+so. The [#set] method, on the other hand, would indiscriminately clear
+all the values in the field before adding <em>value</em>, even if it
+already existed.</p>
+
+<p>If you want to add a value that does not exist, while also preserving
+other values that also exist in the field, you should use the [#add]
+method instead.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$key</var>,…</dt>
+						<dd>the field name</dd>
+						<dt><var>$value</var>,…</dt>
+						<dd>the value to ensure exists alone in the field</dd>
+						<dt><var>$record</var>,…</dt>
+						<dd>the record that contains the field</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__toString" id="___toString">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___toString">#</a>
+			<code><a href="source-class-Concourse.html#830-835" title="Go to source code">__toString</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+					<h4>Override</h4>
+					<div class="list">
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		Concourse PHP Driver API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
