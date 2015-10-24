@@ -133,7 +133,7 @@ class Concourse {
     }
 
     /**
-     * Add a value if it doesn't already exist
+     * Add a value if it doesn't already exist.
      *
      * @api
      ** <strong>add($key, $value, $record)</strong> - Add a value to a field in a single record and return a flag that indicates whether the value was added to the field
