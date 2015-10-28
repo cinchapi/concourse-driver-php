@@ -64,27 +64,12 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-Concourse.html">Concourse</a></li>
-				<li><a href="class-Dictionary.html">Dictionary</a></li>
 			</ul>
 
 
 
 
 
-			<h3>Functions</h3>
-			<ul>
-				<li><a href="function-array_fetch.html">array_fetch</a></li>
-				<li><a href="function-array_fetch_unset.html">array_fetch_unset</a></li>
-				<li><a href="function-benchmark.html">benchmark</a></li>
-				<li><a href="function-current_time_micros.html">current_time_micros</a></li>
-				<li><a href="function-current_time_millis.html">current_time_millis</a></li>
-				<li><a href="function-expand_path.html">expand_path</a></li>
-				<li><a href="function-get_caller.html">get_caller</a></li>
-				<li><a href="function-implode_all.html">implode_all</a></li>
-				<li><a href="function-implode_all_assoc.html">implode_all_assoc</a></li>
-				<li><a href="function-println.html">println</a></li>
-				<li><a href="function-try_unserialize.html">try_unserialize</a></li>
-			</ul>
 		</div>
 	</div>
 </div>
@@ -121,7 +106,9 @@ matters.</p>
 		
 		
 
-			<b>Located at</b> <a href="source-class-Concourse.html#31-897" title="Go to source code">Concourse.php</a>
+				<b>Author:</b>
+				Jeff Nelson<br>
+			<b>Located at</b> <a href="source-class-Concourse.html#31-899" title="Go to source code">Concourse.php</a>
 		<br>
 	</div>
 
@@ -141,7 +128,7 @@ matters.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_connect">#</a>
-			<code><a href="source-class-Concourse.html#42-56" title="Go to source code">connect</a>( <span>string <var>$host</var> = <span class="php-quote">&quot;localhost&quot;</span></span>, <span>integer <var>$port</var> = <span class="php-num">1717</span></span>, <span>string <var>$username</var> = <span class="php-quote">&quot;admin&quot;</span></span>, <span>string <var>$password</var> = <span class="php-quote">&quot;admin&quot;</span></span>, <span>string <var>$environment</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
+			<code><a href="source-class-Concourse.html#44-58" title="Go to source code">connect</a>( <span>string <var>$host</var> = <span class="php-quote">&quot;localhost&quot;</span></span>, <span>integer <var>$port</var> = <span class="php-num">1717</span></span>, <span>string <var>$username</var> = <span class="php-quote">&quot;admin&quot;</span></span>, <span>string <var>$password</var> = <span class="php-quote">&quot;admin&quot;</span></span>, <span>string <var>$environment</var> = <span class="php-quote">&quot;&quot;</span></span> )</code>
 
 			<div class="description short">
 				<p>Create a new client connection.</p>
@@ -191,7 +178,7 @@ matters.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_abort">#</a>
-			<code><a href="source-class-Concourse.html#138-149" title="Go to source code">abort</a>( )</code>
+			<code><a href="source-class-Concourse.html#140-151" title="Go to source code">abort</a>( )</code>
 
 			<div class="description short">
 				<p>Abort the current transaction and discard any changes that were staged.
@@ -224,7 +211,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_add">#</a>
-			<code><a href="source-class-Concourse.html#151-168" title="Go to source code">add</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#153-170" title="Go to source code">add</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Add a value if it doesn't already exist.</p>
@@ -280,7 +267,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_audit">#</a>
-			<code><a href="source-class-Concourse.html#170-189" title="Go to source code">audit</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#172-191" title="Go to source code">audit</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Describe changes made to a record or a field over time.</p>
@@ -335,7 +322,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_browse">#</a>
-			<code><a href="source-class-Concourse.html#191-207" title="Go to source code">browse</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$keys</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#193-209" title="Go to source code">browse</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$keys</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>View the values that have been indexed.</p>
@@ -386,7 +373,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_chronologize">#</a>
-			<code><a href="source-class-Concourse.html#209-225" title="Go to source code">chronologize</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|String <var>$end</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#211-227" title="Go to source code">chronologize</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|String <var>$end</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Return a timeseries that shows the state of a field after each change.</p>
@@ -438,7 +425,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_clear">#</a>
-			<code><a href="source-class-Concourse.html#227-245" title="Go to source code">clear</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#229-247" title="Go to source code">clear</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically remove all the values from one or more fields or one or more records.</p>
@@ -489,7 +476,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_close">#</a>
-			<code><a href="source-class-Concourse.html#247-253" title="Go to source code">close</a>( )</code>
+			<code><a href="source-class-Concourse.html#249-255" title="Go to source code">close</a>( )</code>
 
 			<div class="description short">
 				<p>Close the client connection.</p>
@@ -518,7 +505,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_commit">#</a>
-			<code><a href="source-class-Concourse.html#255-269" title="Go to source code">commit</a>( )</code>
+			<code><a href="source-class-Concourse.html#257-271" title="Go to source code">commit</a>( )</code>
 
 			<div class="description short">
 				<p>Commit the currently running transaction.</p>
@@ -555,7 +542,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_describe">#</a>
-			<code><a href="source-class-Concourse.html#271-287" title="Go to source code">describe</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#273-289" title="Go to source code">describe</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Describe the fields that exist.</p>
@@ -606,7 +593,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_diff">#</a>
-			<code><a href="source-class-Concourse.html#289-308" title="Go to source code">diff</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#291-310" title="Go to source code">diff</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Return the differences in data between two timestamps.</p>
@@ -661,7 +648,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_find">#</a>
-			<code><a href="source-class-Concourse.html#310-330" title="Go to source code">find</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>Cinchapi\Concourse\Thrift\Shared\Operator|string <var>$operator</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>mixed <var>$values</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#312-332" title="Go to source code">find</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>Cinchapi\Concourse\Thrift\Shared\Operator|string <var>$operator</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>mixed <var>$values</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Find the records that match a criteria.</p>
@@ -719,7 +706,7 @@ subsequent changes will be committed immediately.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findOrAdd">#</a>
-			<code><a href="source-class-Concourse.html#332-354" title="Go to source code">findOrAdd</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#334-356" title="Go to source code">findOrAdd</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Find and return the unique record where the <em>key</em> equals
@@ -772,7 +759,7 @@ see the #findOrInsert method, which lets you check a complex criteria.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findOrInsert">#</a>
-			<code><a href="source-class-Concourse.html#356-384" title="Go to source code">findOrInsert</a>( <span>string <var>$criteria</var>,…</span>, <span>mixed <var>$data</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#358-386" title="Go to source code">findOrInsert</a>( <span>string <var>$criteria</var>,…</span>, <span>mixed <var>$data</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Find and return the unique record that matches the <em>criteria</em>, if
@@ -826,7 +813,7 @@ currently satisified.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Concourse.html#386-413" title="Go to source code">get</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>string <var>$criteria</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#388-415" title="Go to source code">get</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>string <var>$criteria</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Get the most recently added value/s.</p>
@@ -891,7 +878,7 @@ currently satisified.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getServerEnvironment">#</a>
-			<code><a href="source-class-Concourse.html#415-422" title="Go to source code">getServerEnvironment</a>( )</code>
+			<code><a href="source-class-Concourse.html#417-424" title="Go to source code">getServerEnvironment</a>( )</code>
 
 			<div class="description short">
 				<p>Return the environment to which the client is connected.</p>
@@ -924,7 +911,7 @@ currently satisified.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getServerVersion">#</a>
-			<code><a href="source-class-Concourse.html#424-433" title="Go to source code">getServerVersion</a>( )</code>
+			<code><a href="source-class-Concourse.html#426-435" title="Go to source code">getServerVersion</a>( )</code>
 
 			<div class="description short">
 				<p>Return the version of Concourse Server to which the client is
@@ -961,7 +948,7 @@ Concourse Server.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_insert">#</a>
-			<code><a href="source-class-Concourse.html#435-453" title="Go to source code">insert</a>( <span>mixed <var>$data</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#437-455" title="Go to source code">insert</a>( <span>mixed <var>$data</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically bulk insert data. This operation is atomic within each record,
@@ -1017,7 +1004,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_inventory">#</a>
-			<code><a href="source-class-Concourse.html#455-462" title="Go to source code">inventory</a>( )</code>
+			<code><a href="source-class-Concourse.html#457-464" title="Go to source code">inventory</a>( )</code>
 
 			<div class="description short">
 				<p>Return all the records that have current or historical data.</p>
@@ -1050,7 +1037,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_jsonify">#</a>
-			<code><a href="source-class-Concourse.html#464-506" title="Go to source code">jsonify</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span>, <span>boolean <var>$includeId</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#466-508" title="Go to source code">jsonify</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span>, <span>boolean <var>$includeId</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Export data as a JSON string.</p>
@@ -1107,7 +1094,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_link">#</a>
-			<code><a href="source-class-Concourse.html#508-541" title="Go to source code">link</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#510-543" title="Go to source code">link</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Add a link from a field in the <em>source</em> to one or more <em>destination</em> records.</p>
@@ -1158,7 +1145,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_ping">#</a>
-			<code><a href="source-class-Concourse.html#553-566" title="Go to source code">ping</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#555-568" title="Go to source code">ping</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Check if data currently exists.</p>
@@ -1205,7 +1192,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-Concourse.html#568-583" title="Go to source code">remove</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#570-585" title="Go to source code">remove</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Remove a value if it exists.</p>
@@ -1256,7 +1243,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_revert">#</a>
-			<code><a href="source-class-Concourse.html#585-602" title="Go to source code">revert</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#587-604" title="Go to source code">revert</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically return data to a previous state.</p>
@@ -1307,7 +1294,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_search">#</a>
-			<code><a href="source-class-Concourse.html#604-622" title="Go to source code">search</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$query</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#606-624" title="Go to source code">search</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$query</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Search for all the records that have at a value in the <em>key</em> field that fully or partially matches the <em>query</em>.</p>
@@ -1347,7 +1334,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_select">#</a>
-			<code><a href="source-class-Concourse.html#624-655" title="Go to source code">select</a>( <span>string <var>$criteria</var>,…</span>, <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#626-657" title="Go to source code">select</a>( <span>string <var>$criteria</var>,…</span>, <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Select all values.</p>
@@ -1412,7 +1399,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_set">#</a>
-			<code><a href="source-class-Concourse.html#657-673" title="Go to source code">set</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#659-675" title="Go to source code">set</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically remove all existing values from a field and add a new one.</p>
@@ -1462,7 +1449,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_stage">#</a>
-			<code><a href="source-class-Concourse.html#675-730" title="Go to source code">stage</a>( <span> <var>$lambda</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Concourse.html#677-732" title="Go to source code">stage</a>( <span> <var>$lambda</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Start a new transaction.</p>
@@ -1524,7 +1511,7 @@ any of the actions in the transaction.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_time">#</a>
-			<code><a href="source-class-Concourse.html#732-740" title="Go to source code">time</a>( <span>string <var>$phrase</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#734-742" title="Go to source code">time</a>( <span>string <var>$phrase</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Return the server's unix timestamp in microseconds. The precision of the timestamp is subject to network latency.</p>
@@ -1562,7 +1549,7 @@ any of the actions in the transaction.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unlink">#</a>
-			<code><a href="source-class-Concourse.html#742-775" title="Go to source code">unlink</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#744-777" title="Go to source code">unlink</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Remove the link from a key in the <em>source</em> to one or more <em>destination</em> records.</p>
@@ -1613,7 +1600,7 @@ any of the actions in the transaction.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verify">#</a>
-			<code><a href="source-class-Concourse.html#777-779" title="Go to source code">verify</a>( )</code>
+			<code><a href="source-class-Concourse.html#779-781" title="Go to source code">verify</a>( )</code>
 
 			<div class="description short">
 				
@@ -1642,7 +1629,7 @@ any of the actions in the transaction.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifyAndSwap">#</a>
-			<code><a href="source-class-Concourse.html#781-809" title="Go to source code">verifyAndSwap</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>mixed <var>$replacement</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#783-811" title="Go to source code">verifyAndSwap</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>mixed <var>$replacement</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically verify the existence of a <em>value</em> for a <em>key</em>
@@ -1690,7 +1677,7 @@ one.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifyOrSet">#</a>
-			<code><a href="source-class-Concourse.html#811-844" title="Go to source code">verifyOrSet</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#813-846" title="Go to source code">verifyOrSet</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically verify that a field contains a single particular value or set
@@ -1747,7 +1734,7 @@ method instead.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Concourse.html#846-851" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-Concourse.html#848-853" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				

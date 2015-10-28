@@ -84,9 +84,8 @@
 
 
 	<div class="description">
-	<p>A Link is a wrapper around a Long that represents the primary key of
-a record and distinguishes from simple long values. A Link is returned from
-read methods in Concourse if data was added using one of the #link operations.</p>
+	<p>A Link is a wrapper to distinguish a record's primary key from other
+integers. Links are returned for reads whenever data was written if using one of the #link operations.</p>
 	</div>
 
 
@@ -103,7 +102,9 @@ read methods in Concourse if data was added using one of the #link operations.</
 		<b>Namespace:</b> <a href="namespace-concourse.html">concourse</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-concourse.Link.html#19-44" title="Go to source code">Link.php</a>
+				<b>Author:</b>
+				Jeff Nelson<br>
+			<b>Located at</b> <a href="source-class-concourse.Link.html#19-75" title="Go to source code">Link.php</a>
 		<br>
 	</div>
 
@@ -116,53 +117,38 @@ read methods in Concourse if data was added using one of the #link operations.</
 
 			<td class="attributes"><code>
 				 public static
-				
+				<code><a href="class-concourse.Link.html">concourse\Link</a></code>
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_to">#</a>
-			<code><a href="source-class-concourse.Link.html#26-28" title="Go to source code">to</a>( <span> <var>$record</var></span> )</code>
+			<code><a href="source-class-concourse.Link.html#28-40" title="Go to source code">to</a>( <span>integer <var>$id</var></span> )</code>
 
 			<div class="description short">
-				
+				<p>Create a new <em>Link</em> that points to the record identified by the
+primary key <em>id</em>.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				
+				<p>Create a new <em>Link</em> that points to the record identified by the
+primary key <em>id</em>.</p>
+
+<p>Users should not create Links directly. Use the <em>#link</em> methods in
+the <em>Concourse</em> client to write links to the database.</p>
 
 
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$id</var></dt>
+						<dd>the primary key of the record to which the Link points</dd>
+					</dl></div>
 
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="__toString" id="___toString">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-concourse.Link.html#36-38" title="Go to source code">__toString</a>( )</code>
-
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-
-
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-concourse.Link.html">concourse\Link</a></code><br>the Link that wraps the primary key
+					</div>
 
 
 
@@ -174,24 +160,61 @@ read methods in Concourse if data was added using one of the #link operations.</
 
 			<td class="attributes"><code>
 				 public 
-				
+				integer
 				
 				</code>
 			</td>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRecord">#</a>
-			<code><a href="source-class-concourse.Link.html#40-42" title="Go to source code">getRecord</a>( )</code>
+			<code><a href="source-class-concourse.Link.html#57-64" title="Go to source code">getRecord</a>( )</code>
 
 			<div class="description short">
-				
+				<p>Return the record id to which this Link points.</p>
 			</div>
 
 			<div class="description detailed hidden">
+				<p>Return the record id to which this Link points.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer<br>the underlying record id
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__toString" id="___toString">
+
+			<td class="attributes"><code>
+				 public 
+				string
 				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___toString">#</a>
+			<code><a href="source-class-concourse.Link.html#66-73" title="Go to source code">__toString</a>( )</code>
+
+			<div class="description short">
+				<p>Return a string representation of this object.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return a string representation of this object.</p>
 
 
 
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>the object encoded as a string
+					</div>
 
 
 
