@@ -29,9 +29,6 @@ use Concourse\Link;
 use Concourse\Convert;
 
 /**
- * Concourse is a self-tuning database that is designed for both ad hoc
- * analytics and high volume transactions at scale.
- *
  * This is the main entry point into the PHP Driver for Concourse.
  *
  * Use Concourse::connect() to create a client connection.
@@ -87,12 +84,15 @@ final class Concourse {
     private $client;
 
     /**
-     * @var Thrift\Shared\TransactionToken the token that identifies the client's server-side transaction. This value is NULL if the client is in autocommit mode.
+     * @var Thrift\Shared\TransactionToken the token that identifies the
+     * client's server-side transaction. This value is NULL if the client is in
+     * autocommit mode.
      */
     private $transaction;
 
     /**
-     * @var Thrift\Shared\AccessToken the access token that is used to identify, authenticate and authorize the client after the initial connection.
+     * @var Thrift\Shared\AccessToken the access token that is used to identify,
+     * authenticate and authorize the client after the initial connection.
      */
     private $creds;
 
@@ -261,7 +261,7 @@ final class Concourse {
     public function commit(){
         $token = $this->transaction;
         $this->transaction = null;
-        if(!is_null($token)){
+        if($token !== null){
             return $this->client->commit($this->creds, $token, $this->environment);
         }
         else {

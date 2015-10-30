@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>No namespace | Concourse PHP Driver</title>
+	<title>Namespace concourse\thrift\exceptions | Concourse PHP Driver</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
 	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
@@ -47,17 +47,17 @@
 		<div id="groups">
 				<h3>Namespaces</h3>
 			<ul>
-					<li>
+					<li class="active">
 						<a href="namespace-concourse.html">
 							concourse<span></span>
 						</a>
 							<ul>
-					<li>
+					<li class="active">
 						<a href="namespace-concourse.thrift.html">
 							thrift<span></span>
 						</a>
 							<ul>
-					<li>
+					<li class="active">
 						<a href="namespace-concourse.thrift.exceptions.html">
 							exceptions						</a>
 							</li>
@@ -66,7 +66,7 @@
 							shared						</a>
 							</li>
 								</ul></li></ul></li>
-					<li class="active">
+					<li>
 						<a href="namespace-None.html">
 							None						</a>
 							</li>
@@ -77,17 +77,17 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-Concourse.html">Concourse</a></li>
+				<li><a href="class-concourse.thrift.exceptions.DuplicateEntryException.html">DuplicateEntryException</a></li>
+				<li><a href="class-concourse.thrift.exceptions.InvalidArgumentException.html">InvalidArgumentException</a></li>
+				<li><a href="class-concourse.thrift.exceptions.ParseException.html">ParseException</a></li>
+				<li><a href="class-concourse.thrift.exceptions.SecurityException.html">SecurityException</a></li>
+				<li><a href="class-concourse.thrift.exceptions.TransactionException.html">TransactionException</a></li>
 			</ul>
 
 
 
 
 
-			<h3>Functions</h3>
-			<ul>
-				<li><a href="function-count_array_keys_intersect.html">count_array_keys_intersect</a></li>
-			</ul>
 		</div>
 	</div>
 </div>
@@ -97,7 +97,7 @@
 <div id="right">
 	<div id="rightInner">
 <div id="content" class="namespace">
-	<h1>No namespace</h1>
+	<h1>Namespace <a href="namespace-concourse.html">concourse</a>\<a href="namespace-concourse.thrift.html">thrift</a>\exceptions</h1>
 
 
 
@@ -105,26 +105,43 @@
     <div class="panel-heading"><h2>Classes summary</h2></div>
 	<table class="summary table table-bordered table-striped" id="classes">
 <tr>
-	<td class="name"><a href="class-Concourse.html">Concourse</a></td>
-	<td>This is the main entry point into the PHP Driver for Concourse.</td>
+	<td class="name"><a href="class-concourse.thrift.exceptions.DuplicateEntryException.html">DuplicateEntryException</a></td>
+	<td><p>Signals that an attempt to conditionally add or insert data based on a
+condition that should be unique, cannot happen because the condition is not
+unique.</p></td>
 </tr>
-	</table>
-</div>
-
-
-
-
-
-<div class="panel panel-default">
-    <div class="panel-heading"><h2>Functions summary</h2></div>
-	<table class="summary table table-bordered table-striped" id="functions">
 <tr>
-	<td class="name"><a href="function-count_array_keys_intersect.html">count_array_keys_intersect</a></td>
-	<td><p>Perform an optimized count of the number of keys in both $array1 and
-$array2.</p></td>
+	<td class="name"><a href="class-concourse.thrift.exceptions.InvalidArgumentException.html">InvalidArgumentException</a></td>
+	<td>Signals that an invalid argument was submitted.</td>
+</tr>
+<tr>
+	<td class="name"><a href="class-concourse.thrift.exceptions.ParseException.html">ParseException</a></td>
+	<td>Signals that an unexpected or invalid token was reached while parsing.</td>
+</tr>
+<tr>
+	<td class="name"><a href="class-concourse.thrift.exceptions.SecurityException.html">SecurityException</a></td>
+	<td><p>Signals that a security violation has occurred and the currently running
+session must end immediately.</p></td>
+</tr>
+<tr>
+	<td class="name"><a href="class-concourse.thrift.exceptions.TransactionException.html">TransactionException</a></td>
+	<td><p>The base class for all exceptions that happen during (staged) operations in
+a transaction.</p>
+
+<p>&lt;</p>
+
+<p>p>
+All operations that occur within a transaction should be wrapped in a
+try-catch block so that transaction exceptions can be caught and the
+transaction can be properly aborted.</p></td>
 </tr>
 	</table>
 </div>
+
+
+
+
+
 </div>
 	</div>
 

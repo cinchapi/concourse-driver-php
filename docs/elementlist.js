@@ -1,3 +1,3 @@
 
 var ApiGen = ApiGen || {};
-ApiGen.elements = [["c","Concourse"],["c","concourse\\Link"],["c","concourse\\Tag"],["f","count_array_keys_intersect()"]];
+ApiGen.elements = [["c","Concourse"],["c","concourse\\Link"],["c","concourse\\Tag"],["c","concourse\\thrift\\Constant"],["c","concourse\\thrift\\exceptions\\DuplicateEntryException"],["c","concourse\\thrift\\exceptions\\InvalidArgumentException"],["c","concourse\\thrift\\exceptions\\ParseException"],["c","concourse\\thrift\\exceptions\\SecurityException"],["c","concourse\\thrift\\exceptions\\TransactionException"],["c","concourse\\thrift\\shared\\AccessToken"],["c","concourse\\thrift\\shared\\Diff"],["c","concourse\\thrift\\shared\\Operator"],["c","concourse\\thrift\\shared\\TransactionToken"],["c","concourse\\thrift\\shared\\Type"],["f","count_array_keys_intersect()"]];
