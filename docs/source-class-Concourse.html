@@ -264,19 +264,19 @@
 </span><span id="150" class="l">    }
 </span><span id="151" class="l">
 </span><span id="152" class="l">    <span class="php-comment">/**
-</span></span><span id="153" class="l"><span class="php-comment">     * Add a value if it doesn't already exist.
+</span></span><span id="153" class="l"><span class="php-comment">     * Append a &lt;em&gt;key&lt;/em&gt; as a &lt;em&gt;value&lt;/em&gt; in one or more records.
 </span></span><span id="154" class="l"><span class="php-comment">     *
 </span></span><span id="155" class="l"><span class="php-comment">     * @api
-</span></span><span id="156" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value, $record)&lt;/strong&gt; - Add a value to a field in a single record and return a flag that indicates whether the value was added to the field
-</span></span><span id="157" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value, $records)&lt;/strong&gt; - Add a value to a field in multiple records and return a mapping from each record to a boolean flag that indicates whether the value was added to the field
-</span></span><span id="158" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value)&lt;/strong&gt; - Add a value to a field in a new record and return the id of the new record
+</span></span><span id="156" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value)&lt;/strong&gt; - Append &lt;em&gt;key&lt;/em&gt; as &lt;em&gt;value&lt;/em&gt; in a new record and return the id.
+</span></span><span id="157" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value, $record)&lt;/strong&gt; - Append &lt;em&gt;key&lt;/em&gt; as &lt;em&gt;value&lt;/em&gt; in &lt;em&gt;record&lt;/em&gt; if and only if it doesn't exist and return a boolean that indicates whether the data was added.
+</span></span><span id="158" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value, $records)&lt;/strong&gt; - Append &lt;em&gt;key&lt;/em&gt; as &lt;em&gt;value&lt;/em&gt; in each of the &lt;em&gt;records&lt;/em&gt; where it doesn't exist and return a mapping from each record id to a boolean that indicates if the data was added in that record.
 </span></span><span id="159" class="l"><span class="php-comment">     *
 </span></span><span id="160" class="l"><span class="php-comment">     * @param string $key the field name
 </span></span><span id="161" class="l"><span class="php-comment">     * @param mixed $value the value to add
-</span></span><span id="162" class="l"><span class="php-comment">     * @param integer $record The record where the data should be added (optional)
-</span></span><span id="163" class="l"><span class="php-comment">     * @param array $records The records where the data should be added (optional)
+</span></span><span id="162" class="l"><span class="php-comment">     * @param integer $record the id of the record in which an attempt is made to add the data (optional)
+</span></span><span id="163" class="l"><span class="php-comment">     * @param array $records an array of ids for the records in which an attempt is made to add the data (optional)
 </span></span><span id="164" class="l"><span class="php-comment">     * @return boolean|array|integer
-</span></span><span id="165" class="l"><span class="php-comment">     * @throws Thrift\Exceptions\InvalidArgumentException
+</span></span><span id="165" class="l"><span class="php-comment">     * @throws Concourse\Thrift\Exceptions\InvalidArgumentException
 </span></span><span id="166" class="l"><span class="php-comment">     */</span>
 </span><span id="167" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> add() {
 </span><span id="168" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;dispatch(<span class="php-keyword2">func_get_args</span>());
