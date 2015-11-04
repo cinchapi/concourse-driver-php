@@ -268,8 +268,8 @@
 </span></span><span id="154" class="l"><span class="php-comment">     *
 </span></span><span id="155" class="l"><span class="php-comment">     * @api
 </span></span><span id="156" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value)&lt;/strong&gt; - Append &lt;em&gt;key&lt;/em&gt; as &lt;em&gt;value&lt;/em&gt; in a new record and return the id.
-</span></span><span id="157" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value, $record)&lt;/strong&gt; - Append &lt;em&gt;key&lt;/em&gt; as &lt;em&gt;value&lt;/em&gt; in &lt;em&gt;record&lt;/em&gt; if and only if it doesn't exist and return a boolean that indicates whether the data was added.
-</span></span><span id="158" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value, $records)&lt;/strong&gt; - Append &lt;em&gt;key&lt;/em&gt; as &lt;em&gt;value&lt;/em&gt; in each of the &lt;em&gt;records&lt;/em&gt; where it doesn't exist and return a mapping from each record id to a boolean that indicates if the data was added in that record.
+</span></span><span id="157" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value, $record)&lt;/strong&gt; - Append &lt;em&gt;key&lt;/em&gt; as &lt;em&gt;value&lt;/em&gt; in &lt;em&gt;record&lt;/em&gt; if and only if it doesn't exist and return a boolean that indicates if the data was added.
+</span></span><span id="158" class="l"><span class="php-comment">     ** &lt;strong&gt;add($key, $value, $records)&lt;/strong&gt; - Append &lt;em&gt;key&lt;/em&gt; as &lt;em&gt;value&lt;/em&gt; in each of the &lt;em&gt;records&lt;/em&gt; where it doesn't exist and return an array mapping from each record id to a boolean that indicates if the data was added in that record.
 </span></span><span id="159" class="l"><span class="php-comment">     *
 </span></span><span id="160" class="l"><span class="php-comment">     * @param string $key the field name
 </span></span><span id="161" class="l"><span class="php-comment">     * @param mixed $value the value to add
