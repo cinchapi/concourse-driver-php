@@ -287,21 +287,21 @@
 </span><span id="173" class="l">    }
 </span><span id="174" class="l">
 </span><span id="175" class="l">    <span class="php-comment">/**
-</span></span><span id="176" class="l"><span class="php-comment">     * Describe changes made to a record or a field over time.
+</span></span><span id="176" class="l"><span class="php-comment">     * List changes made to a &lt;em&gt;field&lt;/em&gt; or &lt;em&gt;record&lt;/em&gt; over time.
 </span></span><span id="177" class="l"><span class="php-comment">     *
 </span></span><span id="178" class="l"><span class="php-comment">     * @api
-</span></span><span id="179" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($key, $record)&lt;/strong&gt; - Describe all the changes made to a field over time.
-</span></span><span id="180" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($key, $record, $start)&lt;/strong&gt; - Describe all the changes made to a field since the specified &lt;em&gt;start&lt;/em&gt; timestamp.
-</span></span><span id="181" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($key, $record, $start, $end)&lt;/strong&gt; - Describe all the changes made to a field between the specified &lt;em&gt;start&lt;/em&gt; and &lt;em&gt;end&lt;/em&gt; timestamps.
-</span></span><span id="182" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($record)&lt;/strong&gt; - Describe all the changes made to a record over time.
-</span></span><span id="183" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($record, $start)&lt;/strong&gt; - Describe all the changes made to a record since the specified &lt;em&gt;start&lt;/em&gt; timestamp.
-</span></span><span id="184" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($record, $start, $end)&lt;/strong&gt; - Describe all the changes made to a record between the specified &lt;em&gt;start&lt;/em&gt; and &lt;em&gt;end&lt;/em&gt; timestamps.
+</span></span><span id="179" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($key, $record)&lt;/strong&gt; - List all the changes ever made to the &lt;em&gt;key&lt;/em&gt; field in &lt;em&gt;record&lt;/em&gt;.
+</span></span><span id="180" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($key, $record, $start)&lt;/strong&gt; - List all the changes made to the &lt;em&gt;key&lt;/em&gt; field in &lt;em&gt;record&lt;/em&gt; since &lt;em&gt;start&lt;/em&gt; (non-inclusive).
+</span></span><span id="181" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($key, $record, $start, $end)&lt;/strong&gt; - List all the changes made to the &lt;em&gt;key&lt;/em&gt; field in &lt;em&gt;record&lt;/em&gt; between &lt;em&gt;start&lt;/em&gt; (non-inclusive) and &lt;em&gt;end&lt;/em&gt; (inclusive).
+</span></span><span id="182" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($record)&lt;/strong&gt; - List all the changes ever made &lt;em&gt;record&lt;/em&gt;.
+</span></span><span id="183" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($record, $start)&lt;/strong&gt; - List all the changes made to &lt;em&gt;record&lt;/em&gt; since &lt;em&gt;start&lt;/em&gt; (non-inclusive).
+</span></span><span id="184" class="l"><span class="php-comment">     ** &lt;strong&gt;audit($record, $start, $end)&lt;/strong&gt; - List all the changes made to &lt;em&gt;record&lt;/em&gt; between &lt;em&gt;start&lt;/em&gt; (non-inclusive) and &lt;em&gt;end&lt;/em&gt; (inclusive).
 </span></span><span id="185" class="l"><span class="php-comment">     *
-</span></span><span id="186" class="l"><span class="php-comment">     * @param string $key the field name (optional)
-</span></span><span id="187" class="l"><span class="php-comment">     * @param integer $record the record that contains the $key field or the record to audit if no $key is provided
-</span></span><span id="188" class="l"><span class="php-comment">     * @param integer|string $start the earliest timestamp to check (optional)
-</span></span><span id="189" class="l"><span class="php-comment">     * @param integer|string $end the latest timestamp to check (optional)
-</span></span><span id="190" class="l"><span class="php-comment">     * @return array mapping from each timestamp to a description of the change that occurred.
+</span></span><span id="186" class="l"><span class="php-comment">     * @param string $key the field name
+</span></span><span id="187" class="l"><span class="php-comment">     * @param integer $record the record id
+</span></span><span id="188" class="l"><span class="php-comment">     * @param integer|string $start a non-inclusive timestamp that is the starting point of the audit
+</span></span><span id="189" class="l"><span class="php-comment">     * @param integer|string $end an inclusive timestamp of the most recent change that should possibly be included in the audit
+</span></span><span id="190" class="l"><span class="php-comment">     * @return array an array containing, for each change, a mapping from timestamp to a description of the revision
 </span></span><span id="191" class="l"><span class="php-comment">     */</span>
 </span><span id="192" class="l">    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> audit(){
 </span><span id="193" class="l">        <span class="php-keyword1">return</span> <span class="php-var">$this</span>-&gt;dispatch(<span class="php-keyword2">func_get_args</span>());
