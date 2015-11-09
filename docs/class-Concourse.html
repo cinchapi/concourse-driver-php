@@ -447,23 +447,23 @@ currently or previously stored.</p>
 			<code><a href="source-class-Concourse.html#233-251" title="Go to source code">clear</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
-				<p>Atomically remove all the values from one or more fields or one or more records.</p>
+				<p>Atomically remove all the values from one or more fields.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Atomically remove all the values from one or more fields or one or more records.</p>
+				<p>Atomically remove all the values from one or more fields.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$key</var>,…</dt>
-						<dd>the name of the field to clear</dd>
+						<dd>the field name</dd>
 						<dt><var>$keys</var>,…</dt>
-						<dd>a collection of fields to clear</dd>
+						<dd>an array of field names</dd>
 						<dt><var>$record</var>,…</dt>
-						<dd>the record that contains the field/s or itself in entirety to clear</dd>
+						<dd>the record id</dd>
 						<dt><var>$records</var>,…</dt>
-						<dd>a collection of records that contain the field/s or  themselves in entirety to clear</dd>
+						<dd>an array of record ids</dd>
 					</dl></div>
 
 
@@ -471,12 +471,12 @@ currently or previously stored.</p>
 					<h4>Api</h4>
 					<div class="list">
 							<ul>
-<li><strong>clear($key, $record)</strong> - Atomically remove all the values from a field in a single record.</li>
-<li><strong>clear($key, $records)</strong> - Atomically remove all the values from a field in multiple records.</li>
-<li><strong>clear($keys, $record)</strong> - Atomically remove all the values from multiple fields in a single record.</li>
-<li><strong>clear($keys, $records)</strong> - Atomically remove all the values from multiple fields in multiple records.</li>
-<li><strong>clear($record)</strong> - Atomically remove all the values from a single record.</li>
-<li><strong>clear($records)</strong> - Atomically remove all the values from multiple records.</li>
+<li><strong>clear($record)</strong> - Atomically remove all the values stored for every key in &lt;em&lt;record</em>.</li>
+<li><strong>clear($records)</strong> - Atomically remove all the values stored for every key in each of the <em>records</em>.</li>
+<li><strong>clear($key, $record)</strong> - Atomically remove all the values stored for <em>key</em> in <em>record</em>.</li>
+<li><strong>clear($keys, $record)</strong> - Atomically remove all the values stored for each of the <em>keys</em> in <em>record</em>.</li>
+<li><strong>clear($key, $records)</strong> - Atomically  remove  all the values stored for <em>key</em> in each of the <em>records</em>.</li>
+<li><strong>clear($keys, $records)</strong> - Atomically remove all the values stored for each of the <em>keys</em> in each of the <em>records</em>.</li>
 </ul><br>
 					</div>
 
