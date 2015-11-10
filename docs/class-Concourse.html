@@ -123,7 +123,7 @@
 
 				<b>Author:</b>
 				Jeff Nelson<br>
-			<b>Located at</b> <a href="source-class-Concourse.html#31-917" title="Go to source code">Concourse.php</a>
+			<b>Located at</b> <a href="source-class-Concourse.html#31-981" title="Go to source code">Concourse.php</a>
 		<br>
 	</div>
 
@@ -228,7 +228,7 @@ no-op.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_add">#</a>
-			<code><a href="source-class-Concourse.html#156-173" title="Go to source code">add</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#156-181" title="Go to source code">add</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Append a <em>key</em> as a <em>value</em> in one or more records.</p>
@@ -245,9 +245,11 @@ no-op.</p>
 						<dt><var>$value</var>,…</dt>
 						<dd>the value to add</dd>
 						<dt><var>$record</var>,…</dt>
-						<dd>the id of the record in which an attempt is made to add the data (optional)</dd>
+						<dd><p>the id of the record in which an attempt is made
+to add the data (optional)</p></dd>
 						<dt><var>$records</var>,…</dt>
-						<dd>an array of ids for the records in which an attempt is made to add the data (optional)</dd>
+						<dd><p>an array of ids for the records in which an attempt
+is made to add the data (optional)</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -263,9 +265,15 @@ no-op.</p>
 					<h4>Api</h4>
 					<div class="list">
 							<ul>
-<li><strong>add($key, $value)</strong> - Append <em>key</em> as <em>value</em> in a new record and return the id.</li>
-<li><strong>add($key, $value, $record)</strong> - Append <em>key</em> as <em>value</em> in <em>record</em> if and only if it doesn't exist and return a boolean that indicates if the data was added.</li>
-<li><strong>add($key, $value, $records)</strong> - Append <em>key</em> as <em>value</em> in each of the <em>records</em> where it doesn't exist and return an array mapping from each record id to a boolean that indicates if the data was added in that record.</li>
+<li><strong>add($key, $value)</strong> - Append <em>key</em> as
+<em>value</em> in a new record and return the id.</li>
+<li><strong>add($key, $value, $record)</strong> - Append <em>key</em> as
+<em>value</em> in <em>record</em> if and only if it doesn't exist and
+return a boolean that indicates if the data was added.</li>
+<li><strong>add($key, $value, $records)</strong> - Append <em>key</em> as
+<em>value</em> in each of the <em>records</em> where it doesn't exist and
+return an array mapping from each record id to a boolean that indicates
+if the data was added in that record.</li>
 </ul><br>
 					</div>
 
@@ -284,7 +292,7 @@ no-op.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_audit">#</a>
-			<code><a href="source-class-Concourse.html#175-194" title="Go to source code">audit</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#183-214" title="Go to source code">audit</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>List changes made to a <em>field</em> or <em>record</em> over time.</p>
@@ -301,26 +309,38 @@ no-op.</p>
 						<dt><var>$record</var>,…</dt>
 						<dd>the record id</dd>
 						<dt><var>$start</var>,…</dt>
-						<dd>an an inclusive timestamp for the oldest change that should possibly be included in the audit</dd>
+						<dd><p>an an inclusive timestamp for the oldest
+change that should possibly be included in the audit</p></dd>
 						<dt><var>$end</var>,…</dt>
-						<dd>a non-inclusive timestamp for the most recent change that should possibly be included in the audit</dd>
+						<dd><p>a non-inclusive timestamp for the most recent
+change that should possibly be included in the audit</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>an array containing, for each change, a mapping from timestamp to a description of the revision
+						array<br><p>an array containing, for each change, a mapping from
+timestamp to a description of the revision</p>
 					</div>
 
 
 					<h4>Api</h4>
 					<div class="list">
 							<ul>
-<li><strong>audit($key, $record)</strong> - List all the changes ever made to the <em>key</em> field in <em>record</em>.</li>
-<li><strong>audit($key, $record, $start)</strong> - List all the changes made to the <em>key</em> field in <em>record</em> since <em>start</em> (inclusive).</li>
-<li><strong>audit($key, $record, $start, $end)</strong> - List all the changes made to the <em>key</em> field in <em>record</em> between <em>start</em> (inclusive) and <em>end</em> (non-inclusive).</li>
-<li><strong>audit($record)</strong> - List all the changes ever made <em>record</em>.</li>
-<li><strong>audit($record, $start)</strong> - List all the changes made to <em>record</em> since <em>start</em> (inclusive).</li>
-<li><strong>audit($record, $start, $end)</strong> - List all the changes made to <em>record</em> between <em>start</em> (inclusive) and <em>end</em> (non-inclusive).</li>
+<li><strong>audit($key, $record)</strong> - List all the changes ever made
+to the <em>key</em> field in <em>record</em>.</li>
+<li><strong>audit($key, $record, $start)</strong> - List all the changes
+made to the <em>key</em> field in <em>record</em> since <em>start</em>
+(inclusive).</li>
+<li><strong>audit($key, $record, $start, $end)</strong> - List all the
+changes made to the <em>key</em> field in <em>record</em> between
+<em>start</em> (inclusive) and <em>end</em> (non-inclusive).</li>
+<li><strong>audit($record)</strong> - List all the changes ever made
+<em>record</em>.</li>
+<li><strong>audit($record, $start)</strong> - List all the changes made to
+<em>record</em> since <em>start</em> (inclusive).</li>
+<li><strong>audit($record, $start, $end)</strong> - List all the changes
+made to <em>record</em> between <em>start</em> (inclusive) and
+<em>end</em> (non-inclusive).</li>
 </ul><br>
 					</div>
 
@@ -339,7 +359,7 @@ no-op.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_browse">#</a>
-			<code><a href="source-class-Concourse.html#196-213" title="Go to source code">browse</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$keys</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#216-247" title="Go to source code">browse</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$keys</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>For one or more <em>fields</em>, view the values from all records
@@ -370,10 +390,24 @@ currently or previously stored.</p>
 					<h4>Api</h4>
 					<div class="list">
 							<ul>
-<li><strong>browse($key)</strong> - View the values from all records that are currently stored for <em>key</em> and return an ArrayAccess associating each value to an array of records that contain that value in the <em>key</em> field.</li>
-<li><strong>browse($key, $timestamp)</strong> - View the values from all records that were stored for <em>key</em> at <em>timestamp</em> and return an ArrayAccess associating each value to an array of records that contained that value in the <em>key</em> field at <em>timestamp</em>.</li>
-<li><strong>browse($keys)</strong> - View the values from all records that are currently stored for each of the <em>keys</em> and return an ArrayAccess associating each <em>key</em> to an ArrayAccess associating each value to an array of records that contain that value in the <em>key</em> field.</li>
-<li><strong>browse($keys, $timestamp)</strong> - View the values from all records that were stored for each of the <em>keys</em> at timestamp and return an ArrayAccess associating each <em>key</em> to an ArrayAccess associating each value to an array of records that contained that value in the <em>key</em> field at <em>timestamp</em>.</li>
+<li><strong>browse($key)</strong> - View the values from all records that
+are currently stored for <em>key</em> and return an ArrayAccess
+associating each value to an array of records that contain that value in
+the <em>key</em> field.</li>
+<li><strong>browse($key, $timestamp)</strong> - View the values from all
+records that were stored for <em>key</em> at <em>timestamp</em> and
+return an ArrayAccess associating each value to an array of records that
+contained that value in the <em>key</em> field at <em>timestamp</em>.</li>
+<li><strong>browse($keys)</strong> - View the values from all records that
+are currently stored for each of the <em>keys</em> and return an
+ArrayAccess associating each <em>key</em> to an ArrayAccess associating
+each value to an array of records that contain that value in the
+<em>key</em> field.</li>
+<li><strong>browse($keys, $timestamp)</strong> - View the values from all
+records that were stored for each of the <em>keys</em> at timestamp and
+return an ArrayAccess associating each <em>key</em> to an ArrayAccess
+associating each value to an array of records that contained that value
+in the <em>key</em> field at <em>timestamp</em>.</li>
 </ul><br>
 					</div>
 
@@ -392,7 +426,7 @@ currently or previously stored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_chronologize">#</a>
-			<code><a href="source-class-Concourse.html#215-231" title="Go to source code">chronologize</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#249-279" title="Go to source code">chronologize</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>View a time series with snapshots of a <em>field</em> after every change.</p>
@@ -409,23 +443,37 @@ currently or previously stored.</p>
 						<dt><var>$record</var>,…</dt>
 						<dd>the record id</dd>
 						<dt><var>$start</var>,…</dt>
-						<dd>the first possible timestamp to include in the time series</dd>
+						<dd><p>the first possible timestamp to include in
+the time series</p></dd>
 						<dt><var>$end</var>,…</dt>
-						<dd>the timestamp that should be greater than every timestamp in the time series</dd>
+						<dd><p>the timestamp that should be greater than
+every timestamp in the time series</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						array<br>associating each modification timestamp to the list of values that were stored in the field after the change
+						array<br><p>associating each modification timestamp to the list of
+values that were stored in the field after the change</p>
 					</div>
 
 
 					<h4>Api</h4>
 					<div class="list">
 							<ul>
-<li><strong>chronologize($key, $record)</strong> - View a time series that associates the timestamp of each modification for <em>key</em> in <em>record</em> to a snapshot containing the values that were stored in the field after the change.</li>
-<li><strong>chronologize($key, $record, $start)</strong> - View a time series between <em>start</em> (inclusive) and the present that associates the timestamp of each modification for <em>key</em> in <em>record</em> to a snapshot containing the values that were stored in the field after the change.</li>
-<li><strong>chronologize($key, $record, $start, $end)</strong> - View a time series between <em>start</em> (inclusive) and <em>end</em> (non-inclusive) that associates the timestamp of each modification for <em>key</em> in <em>record</em> to a snapshot containing the values that were stored in the field after the change.</li>
+<li><strong>chronologize($key, $record)</strong> - View a time series that
+associates the timestamp of each modification for <em>key</em> in
+<em>record</em> to a snapshot containing the values that were stored in
+the field after the change.</li>
+<li><strong>chronologize($key, $record, $start)</strong> - View a time
+series between <em>start</em> (inclusive) and the present that associates
+the timestamp of each modification for <em>key</em> in <em>record</em> to
+a snapshot containing the values that were stored in the field after the
+change.</li>
+<li><strong>chronologize($key, $record, $start, $end)</strong> - View a time
+series between <em>start</em> (inclusive) and <em>end</em>
+(non-inclusive) that associates the timestamp of each modification for
+<em>key</em> in <em>record</em> to a snapshot containing the values that
+were stored in the field after the change.</li>
 </ul><br>
 					</div>
 
@@ -444,7 +492,7 @@ currently or previously stored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_clear">#</a>
-			<code><a href="source-class-Concourse.html#233-251" title="Go to source code">clear</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#281-305" title="Go to source code">clear</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically remove all the values from one or more fields.</p>
@@ -471,12 +519,18 @@ currently or previously stored.</p>
 					<h4>Api</h4>
 					<div class="list">
 							<ul>
-<li><strong>clear($record)</strong> - Atomically remove all the values stored for every key in &lt;em&lt;record</em>.</li>
-<li><strong>clear($records)</strong> - Atomically remove all the values stored for every key in each of the <em>records</em>.</li>
-<li><strong>clear($key, $record)</strong> - Atomically remove all the values stored for <em>key</em> in <em>record</em>.</li>
-<li><strong>clear($keys, $record)</strong> - Atomically remove all the values stored for each of the <em>keys</em> in <em>record</em>.</li>
-<li><strong>clear($key, $records)</strong> - Atomically  remove  all the values stored for <em>key</em> in each of the <em>records</em>.</li>
-<li><strong>clear($keys, $records)</strong> - Atomically remove all the values stored for each of the <em>keys</em> in each of the <em>records</em>.</li>
+<li><strong>clear($record)</strong> - Atomically remove all the values
+stored for every key in &lt;em&lt;record</em>.</li>
+<li><strong>clear($records)</strong> - Atomically remove all the values
+stored for every key in each of the <em>records</em>.</li>
+<li><strong>clear($key, $record)</strong> - Atomically remove all the values
+stored for <em>key</em> in <em>record</em>.</li>
+<li><strong>clear($keys, $record)</strong> - Atomically remove all the
+values stored for each of the <em>keys</em> in <em>record</em>.</li>
+<li><strong>clear($key, $records)</strong> - Atomically  remove  all the
+values stored for <em>key</em> in each of the <em>records</em>.</li>
+<li><strong>clear($keys, $records)</strong> - Atomically remove all the
+values stored for each of the <em>keys</em> in each of the <em>records</em>.</li>
 </ul><br>
 					</div>
 
@@ -495,7 +549,7 @@ currently or previously stored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_close">#</a>
-			<code><a href="source-class-Concourse.html#253-259" title="Go to source code">close</a>( )</code>
+			<code><a href="source-class-Concourse.html#307-313" title="Go to source code">close</a>( )</code>
 
 			<div class="description short">
 				<p>Close the client connection.</p>
@@ -524,7 +578,7 @@ currently or previously stored.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_commit">#</a>
-			<code><a href="source-class-Concourse.html#261-289" title="Go to source code">commit</a>( )</code>
+			<code><a href="source-class-Concourse.html#315-343" title="Go to source code">commit</a>( )</code>
 
 			<div class="description short">
 				<p>
@@ -592,24 +646,25 @@ not in <em>staging</em> mode.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_describe">#</a>
-			<code><a href="source-class-Concourse.html#291-307" title="Go to source code">describe</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#345-371" title="Go to source code">describe</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
-				<p>Describe the fields that exist.</p>
+				<p>For one or more records list all the keys that have at least one value.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Describe the fields that exist.</p>
+				<p>For one or more records list all the keys that have at least one value.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
 						<dt><var>$record</var>,…</dt>
-						<dd>the single record to describe (either $record or $records is required)</dd>
+						<dd>the record id</dd>
 						<dt><var>$records</var>,…</dt>
-						<dd>the collection of records to describe (either $record or $records is required)</dd>
+						<dd>a collection of record ids</dd>
 						<dt><var>$timestamp</var>,…</dt>
-						<dd>the timestamp to use when describe the record/s (optional)</dd>
+						<dd><p>the historical timestamp to use in the
+lookup</p></dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -621,10 +676,19 @@ not in <em>staging</em> mode.
 					<h4>Api</h4>
 					<div class="list">
 							<ul>
-<li><strong>describe($record)</strong> - Return all the keys in the <em>record</em>.</li>
-<li><strong>describe($record, $timestamp)</strong> - Return all the keys that were in the <em>record</em> at <em>timestamp</em>.</li>
-<li><strong>describe($records)</strong> - Return an array mapping each of the <em>records</em> to the array of keys that are in each record.</li>
-<li><strong>describe($records, $timestamp)</strong> - Return an array mapping each of the <em>records</em> to the array of keys that were in each record at <em>timestamp</em>.</li>
+<li><strong>describe($record)</strong> - List all the keys in
+<em>record</em> that have at least one value and return that Array of
+keys.</li>
+<li><strong>describe($record, $timestamp)</strong> - List all the keys in
+<em>record</em> that had at least one value at <em>timestamp</em> and
+return that Array of keys.</li>
+<li><strong>describe($records)</strong> - For each of the <em>records</em>,
+list all the keys that have at least one value and return an Array
+associating each record id to the Array of keys in that record.</li>
+<li><strong>describe($records, $timestamp)</strong> - For each of the
+<em>records</em>, list all the keys that had at least one value at
+<em>timestamp</em> and return an Array associating each record id to the
+Array of key that were in that record at <em>timestamp</em>.</li>
 </ul><br>
 					</div>
 
@@ -643,7 +707,7 @@ not in <em>staging</em> mode.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_diff">#</a>
-			<code><a href="source-class-Concourse.html#309-328" title="Go to source code">diff</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#373-392" title="Go to source code">diff</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$start</var>,…</span>, <span>integer|string <var>$end</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Return the differences in data between two timestamps.</p>
@@ -698,7 +762,7 @@ not in <em>staging</em> mode.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_find">#</a>
-			<code><a href="source-class-Concourse.html#330-350" title="Go to source code">find</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>Cinchapi\Concourse\Thrift\Shared\Operator|string <var>$operator</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>mixed <var>$values</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#394-414" title="Go to source code">find</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>Cinchapi\Concourse\Thrift\Shared\Operator|string <var>$operator</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>mixed <var>$values</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Find the records that match a criteria.</p>
@@ -756,7 +820,7 @@ not in <em>staging</em> mode.
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findOrAdd">#</a>
-			<code><a href="source-class-Concourse.html#352-374" title="Go to source code">findOrAdd</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#416-438" title="Go to source code">findOrAdd</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Find and return the unique record where the <em>key</em> equals
@@ -809,7 +873,7 @@ see the #findOrInsert method, which lets you check a complex criteria.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_findOrInsert">#</a>
-			<code><a href="source-class-Concourse.html#376-404" title="Go to source code">findOrInsert</a>( <span>string <var>$criteria</var>,…</span>, <span>mixed <var>$data</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#440-468" title="Go to source code">findOrInsert</a>( <span>string <var>$criteria</var>,…</span>, <span>mixed <var>$data</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Find and return the unique record that matches the <em>criteria</em>, if
@@ -863,7 +927,7 @@ currently satisified.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_get">#</a>
-			<code><a href="source-class-Concourse.html#406-433" title="Go to source code">get</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>string <var>$criteria</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#470-497" title="Go to source code">get</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>string <var>$criteria</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Get the most recently added value/s.</p>
@@ -928,7 +992,7 @@ currently satisified.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getServerEnvironment">#</a>
-			<code><a href="source-class-Concourse.html#435-442" title="Go to source code">getServerEnvironment</a>( )</code>
+			<code><a href="source-class-Concourse.html#499-506" title="Go to source code">getServerEnvironment</a>( )</code>
 
 			<div class="description short">
 				<p>Return the environment to which the client is connected.</p>
@@ -961,7 +1025,7 @@ currently satisified.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getServerVersion">#</a>
-			<code><a href="source-class-Concourse.html#444-453" title="Go to source code">getServerVersion</a>( )</code>
+			<code><a href="source-class-Concourse.html#508-517" title="Go to source code">getServerVersion</a>( )</code>
 
 			<div class="description short">
 				<p>Return the version of Concourse Server to which the client is
@@ -998,7 +1062,7 @@ Concourse Server.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_insert">#</a>
-			<code><a href="source-class-Concourse.html#455-473" title="Go to source code">insert</a>( <span>mixed <var>$data</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#519-537" title="Go to source code">insert</a>( <span>mixed <var>$data</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically bulk insert data. This operation is atomic within each record,
@@ -1054,7 +1118,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_inventory">#</a>
-			<code><a href="source-class-Concourse.html#475-482" title="Go to source code">inventory</a>( )</code>
+			<code><a href="source-class-Concourse.html#539-546" title="Go to source code">inventory</a>( )</code>
 
 			<div class="description short">
 				<p>Return all the records that have current or historical data.</p>
@@ -1087,7 +1151,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_jsonify">#</a>
-			<code><a href="source-class-Concourse.html#484-526" title="Go to source code">jsonify</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span>, <span>boolean <var>$includeId</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#548-590" title="Go to source code">jsonify</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span>, <span>boolean <var>$includeId</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Export data as a JSON string.</p>
@@ -1144,7 +1208,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_link">#</a>
-			<code><a href="source-class-Concourse.html#528-561" title="Go to source code">link</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#592-625" title="Go to source code">link</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Add a link from a field in the <em>source</em> to one or more <em>destination</em> records.</p>
@@ -1195,7 +1259,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_ping">#</a>
-			<code><a href="source-class-Concourse.html#573-586" title="Go to source code">ping</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#637-650" title="Go to source code">ping</a>( <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Check if data currently exists.</p>
@@ -1242,7 +1306,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_remove">#</a>
-			<code><a href="source-class-Concourse.html#588-603" title="Go to source code">remove</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#652-667" title="Go to source code">remove</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Remove a value if it exists.</p>
@@ -1293,7 +1357,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_revert">#</a>
-			<code><a href="source-class-Concourse.html#605-622" title="Go to source code">revert</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#669-686" title="Go to source code">revert</a>( <span>string <var>$key</var>,…</span>, <span>array <var>$keys</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>array <var>$records</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically return data to a previous state.</p>
@@ -1344,7 +1408,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_search">#</a>
-			<code><a href="source-class-Concourse.html#624-642" title="Go to source code">search</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$query</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#688-706" title="Go to source code">search</a>( <span>string <var>$key</var>,…</span>, <span>string <var>$query</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Search for all the records that have at a value in the <em>key</em> field that fully or partially matches the <em>query</em>.</p>
@@ -1384,7 +1448,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_select">#</a>
-			<code><a href="source-class-Concourse.html#644-675" title="Go to source code">select</a>( <span>string <var>$criteria</var>,…</span>, <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#708-739" title="Go to source code">select</a>( <span>string <var>$criteria</var>,…</span>, <span>string <var>$key</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>integer|string <var>$timestamp</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Select all values.</p>
@@ -1449,7 +1513,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_set">#</a>
-			<code><a href="source-class-Concourse.html#677-693" title="Go to source code">set</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#741-757" title="Go to source code">set</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically remove all existing values from a field and add a new one.</p>
@@ -1499,7 +1563,7 @@ any of the insert data is already contained.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_stage">#</a>
-			<code><a href="source-class-Concourse.html#695-750" title="Go to source code">stage</a>( <span> <var>$lambda</var> = <span class="php-keyword1">null</span></span> )</code>
+			<code><a href="source-class-Concourse.html#759-814" title="Go to source code">stage</a>( <span> <var>$lambda</var> = <span class="php-keyword1">null</span></span> )</code>
 
 			<div class="description short">
 				<p>Start a new transaction.</p>
@@ -1561,7 +1625,7 @@ any of the actions in the transaction.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_time">#</a>
-			<code><a href="source-class-Concourse.html#752-760" title="Go to source code">time</a>( <span>string <var>$phrase</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#816-824" title="Go to source code">time</a>( <span>string <var>$phrase</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Return the server's unix timestamp in microseconds. The precision of the timestamp is subject to network latency.</p>
@@ -1599,7 +1663,7 @@ any of the actions in the transaction.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unlink">#</a>
-			<code><a href="source-class-Concourse.html#762-795" title="Go to source code">unlink</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#826-859" title="Go to source code">unlink</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Remove the link from a key in the <em>source</em> to one or more <em>destination</em> records.</p>
@@ -1650,7 +1714,7 @@ any of the actions in the transaction.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verify">#</a>
-			<code><a href="source-class-Concourse.html#797-799" title="Go to source code">verify</a>( )</code>
+			<code><a href="source-class-Concourse.html#861-863" title="Go to source code">verify</a>( )</code>
 
 			<div class="description short">
 				
@@ -1679,7 +1743,7 @@ any of the actions in the transaction.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifyAndSwap">#</a>
-			<code><a href="source-class-Concourse.html#801-829" title="Go to source code">verifyAndSwap</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>mixed <var>$replacement</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#865-893" title="Go to source code">verifyAndSwap</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span>, <span>mixed <var>$replacement</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically verify the existence of a <em>value</em> for a <em>key</em>
@@ -1727,7 +1791,7 @@ one.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_verifyOrSet">#</a>
-			<code><a href="source-class-Concourse.html#831-864" title="Go to source code">verifyOrSet</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#895-928" title="Go to source code">verifyOrSet</a>( <span>string <var>$key</var>,…</span>, <span>mixed <var>$value</var>,…</span>, <span>integer <var>$record</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Atomically verify that a field contains a single particular value or set
@@ -1784,7 +1848,7 @@ method instead.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-Concourse.html#866-871" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-Concourse.html#930-935" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				
