@@ -406,7 +406,7 @@
 </span><span id="292" class="l">                <span class="php-var">$ret</span> .= <span class="php-var">$key</span> . <span class="php-quote">&quot; =&gt; [&quot;</span>. implode_all_assoc(<span class="php-var">$value</span>, <span class="php-var">$glue</span>).<span class="php-quote">&quot;]&quot;</span> . <span class="php-var">$glue</span>;
 </span><span id="293" class="l">            }
 </span><span id="294" class="l">            <span class="php-keyword1">else</span> <span class="php-keyword1">if</span>(<span class="php-keyword2">is_object</span>(<span class="php-var">$value</span>)){
-</span><span id="295" class="l">                <span class="php-var">$ref</span> = <span class="php-keyword1">new</span> ReflectionClass(<span class="php-keyword2">get_class</span>(<span class="php-var">$item</span>));
+</span><span id="295" class="l">                <span class="php-var">$ref</span> = <span class="php-keyword1">new</span> ReflectionClass(<span class="php-keyword2">get_class</span>(<span class="php-var">$value</span>));
 </span><span id="296" class="l">                <span class="php-keyword1">if</span>(!<span class="php-var">$ref</span>-&gt;hasMethod(<span class="php-quote">&quot;__toString&quot;</span>)){
 </span><span id="297" class="l">                    <span class="php-var">$ret</span> .= <span class="php-var">$key</span> .<span class="php-quote">&quot; =&gt; &quot;</span>. <span class="php-keyword2">serialize</span>(<span class="php-var">$value</span>) . <span class="php-var">$glue</span>;
 </span><span id="298" class="l">                }
