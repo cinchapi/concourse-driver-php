@@ -99,8 +99,36 @@
 
 
 	<div class="description">
-	<p>A Link is a wrapper to distinguish a record's primary key from other
-integers. Links are returned for reads whenever data was written if using one of the #link operations.</p>
+	<p>A Link is a pointer to a record.</p>
+
+<p>
+Link should never be written directly. They can be created using the
+<em>#link()</em> methods in the Concourse API.
+</p>
+
+<p>
+Links may be returned when reading data using the <em>#select()</em>,
+<em>#get()</em> and <em>#browse()</em> methods. When handling Link
+objects, you can retrieve the underlying record id by calling
+<em>Link#getRecord()</em>.
+</p>
+
+<p>
+When performing a bulk insert (using the <em>Concourse#insert()</em> method),
+you can use this class to create Link objects that are added to the data/json
+blob. Links inserted in this manner will be written in the same way they
+would have been if they were written using the <em>Concourse#link()</em> API
+method.
+</p>
+
+<p>
+To create a static link to a single record, use <em>Link.to(record)</em>.
+</p>
+
+<p>
+To create static links to each of the records that match a criteria, use the
+<em>Link.toWhere()</em> methods.
+</p>
 	</div>
 
 	<dl class="tree well">
@@ -128,7 +156,7 @@ integers. Links are returned for reads whenever data was written if using one of
 
 				<b>Author:</b>
 				Jeff Nelson<br>
-			<b>Located at</b> <a href="source-class-concourse.Link.html#19-82" title="Go to source code">Link.php</a>
+			<b>Located at</b> <a href="source-class-concourse.Link.html#19-119" title="Go to source code">Link.php</a>
 		<br>
 	</div>
 
@@ -148,30 +176,72 @@ integers. Links are returned for reads whenever data was written if using one of
 
 			<td class="name"><div>
 			<a class="anchor" href="#_to">#</a>
-			<code><a href="source-class-concourse.Link.html#28-40" title="Go to source code">to</a>( <span>integer <var>$id</var></span> )</code>
+			<code><a href="source-class-concourse.Link.html#51-59" title="Go to source code">to</a>( <span>integer <var>$record</var></span> )</code>
 
 			<div class="description short">
-				<p>Create a new <em>Link</em> that points to the record identified by the
-primary key <em>id</em>.</p>
+				<p>Return a <em>Link</em> that points to <em>record</em>.</p>
 			</div>
 
 			<div class="description detailed hidden">
-				<p>Create a new <em>Link</em> that points to the record identified by the
-primary key <em>id</em>.</p>
-
-<p>Users should not create Links directly. Use the <em>#link</em> methods in
-the <em>Concourse</em> client to write links to the database.</p>
+				<p>Return a <em>Link</em> that points to <em>record</em>.</p>
 
 
 					<h4>Parameters</h4>
 					<div class="list"><dl>
-						<dt><var>$id</var></dt>
-						<dd>the primary key of the record to which the Link points</dd>
+						<dt><var>$record</var></dt>
+						<dd>the record id</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
 					<div class="list">
-						<code><a href="class-concourse.Link.html">concourse\Link</a></code><br>the Link that wraps the primary key
+						<code><a href="class-concourse.Link.html">concourse\Link</a></code><br>a <em>Link</em> that poins to <em>record</em>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="toWhere" id="_toWhere">
+
+			<td class="attributes"><code>
+				 public static
+				String
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_toWhere">#</a>
+			<code><a href="source-class-concourse.Link.html#61-77" title="Go to source code">toWhere</a>( <span>String <var>$ccl</var></span> )</code>
+
+			<div class="description short">
+				<p>Return a string that instructs Concourse to create links that point to
+each of the records that match the {@code ccl} string.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Return a string that instructs Concourse to create links that point to
+each of the records that match the {@code ccl} string.</p>
+
+<p>
+<strong>NOTE:</strong> This method DOES NOT return a <em>Link</em>
+object, so it should only be used when adding a <em>resolvable link</em>
+value to a data/json blob that will be passed to the <em>Concourse.insert()</em> method.
+</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$ccl</var></dt>
+						<dd><p>a CCL string that describes the records to which a
+                    Link should point</p></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						String<br>a resolvable link instruction
 					</div>
 
 
@@ -191,7 +261,7 @@ the <em>Concourse</em> client to write links to the database.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_getRecord">#</a>
-			<code><a href="source-class-concourse.Link.html#57-64" title="Go to source code">getRecord</a>( )</code>
+			<code><a href="source-class-concourse.Link.html#94-101" title="Go to source code">getRecord</a>( )</code>
 
 			<div class="description short">
 				<p>Return the record id to which this Link points.</p>
@@ -224,7 +294,7 @@ the <em>Concourse</em> client to write links to the database.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_jsonSerialize">#</a>
-			<code><a href="source-class-concourse.Link.html#66-71" title="Go to source code">jsonSerialize</a>( )</code>
+			<code><a href="source-class-concourse.Link.html#103-108" title="Go to source code">jsonSerialize</a>( )</code>
 
 			<div class="description short">
 				
@@ -258,7 +328,7 @@ the <em>Concourse</em> client to write links to the database.</p>
 
 			<td class="name"><div>
 			<a class="anchor" href="#___toString">#</a>
-			<code><a href="source-class-concourse.Link.html#73-80" title="Go to source code">__toString</a>( )</code>
+			<code><a href="source-class-concourse.Link.html#110-117" title="Go to source code">__toString</a>( )</code>
 
 			<div class="description short">
 				<p>Return a string representation of this object.</p>
