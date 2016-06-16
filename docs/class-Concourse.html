@@ -1432,7 +1432,7 @@ a JSON array of objects and optionally include a special <em>identifier
 
 			<td class="name"><div>
 			<a class="anchor" href="#_link">#</a>
-			<code><a href="source-class-Concourse.html#815-853" title="Go to source code">link</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#815-853" title="Go to source code">link</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>array <var>$destinations</var>,…</span>, <span>integer <var>$source</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Add a link from a field in the <em>source</em> to one or more <em>destination</em> records.</p>
@@ -1446,12 +1446,12 @@ a JSON array of objects and optionally include a special <em>identifier
 					<div class="list"><dl>
 						<dt><var>$key</var>,…</dt>
 						<dd>the field name</dd>
-						<dt><var>$source</var>,…</dt>
-						<dd>the source record</dd>
 						<dt><var>$destination</var>,…</dt>
 						<dd>the destination record</dd>
 						<dt><var>$destinations</var>,…</dt>
 						<dd>the destination records</dd>
+						<dt><var>$source</var>,…</dt>
+						<dd>the source record</dd>
 					</dl></div>
 
 					<h4>Returns</h4>
@@ -1465,9 +1465,9 @@ that indicates whether the link was successfully added.</p>
 					<h4>Api</h4>
 					<div class="list">
 							<ul>
-<li><strong>link($key, $source, $destination)</strong> -Append a link from
+<li><strong>link($key, $destination, $source)</strong> -Append a link from
 <em>key</em> in <em>source</em> to <em>destination</em>.</li>
-<li><strong>link($key, $source, $destinations)</strong> - Append links
+<li><strong>link($key, $destinations, $source)</strong> - Append links
 from <em>key</em> in <em>source</em> to each of the
 <em>destinations</em></li>
 </ul><br>
@@ -2022,7 +2022,7 @@ the <em>phrase</em>.</li>
 
 			<td class="name"><div>
 			<a class="anchor" href="#_unlink">#</a>
-			<code><a href="source-class-Concourse.html#1150-1185" title="Go to source code">unlink</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$source</var>,…</span>, <span>integer <var>$destination</var>,…</span> )</code>
+			<code><a href="source-class-Concourse.html#1150-1185" title="Go to source code">unlink</a>( <span>string <var>$key</var>,…</span>, <span>integer <var>$destination</var>,…</span>, <span>integer <var>$source</var>,…</span> )</code>
 
 			<div class="description short">
 				<p>Remove the link from a key in the <em>source</em> to one or more
@@ -2038,10 +2038,10 @@ the <em>phrase</em>.</li>
 					<div class="list"><dl>
 						<dt><var>$key</var>,…</dt>
 						<dd>the field name</dd>
-						<dt><var>$source</var>,…</dt>
-						<dd>the source record</dd>
 						<dt><var>$destination</var>,…</dt>
-						<dd><p>the destination record (required if
+						<dd>the destination record (required if</dd>
+						<dt><var>$source</var>,…</dt>
+						<dd><p>the source record
 $destinations is unspecified)</p></dd>
 					</dl></div>
 
@@ -2054,7 +2054,7 @@ $destinations is unspecified)</p></dd>
 					<h4>Api</h4>
 					<div class="list">
 							<ul>
-<li><strong>unlink($key, $source, $destination)</strong> - If it exists,
+<li><strong>unlink($key, $destination, $source)</strong> - If it exists,
 remove the link from {@code key} in <em>source</em> to <em>destination
 </em> and return <em>true</em> if the link is removed.</li>
 </ul><br>

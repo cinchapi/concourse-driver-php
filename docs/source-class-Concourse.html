@@ -930,16 +930,16 @@
 </span></span><span id="816" class="l"><span class="php-comment">     * Add a link from a field in the &lt;em&gt;source&lt;/em&gt; to one or more &lt;em&gt;destination&lt;/em&gt; records.
 </span></span><span id="817" class="l"><span class="php-comment">     *
 </span></span><span id="818" class="l"><span class="php-comment">     * @api
-</span></span><span id="819" class="l"><span class="php-comment">     ** &lt;strong&gt;link($key, $source, $destination)&lt;/strong&gt; -Append a link from
+</span></span><span id="819" class="l"><span class="php-comment">     ** &lt;strong&gt;link($key, $destination, $source)&lt;/strong&gt; -Append a link from
 </span></span><span id="820" class="l"><span class="php-comment">     * &lt;em&gt;key&lt;/em&gt; in &lt;em&gt;source&lt;/em&gt; to &lt;em&gt;destination&lt;/em&gt;.
-</span></span><span id="821" class="l"><span class="php-comment">     ** &lt;strong&gt;link($key, $source, $destinations)&lt;/strong&gt; - Append links
+</span></span><span id="821" class="l"><span class="php-comment">     ** &lt;strong&gt;link($key, $destinations, $source)&lt;/strong&gt; - Append links
 </span></span><span id="822" class="l"><span class="php-comment">     * from &lt;em&gt;key&lt;/em&gt; in &lt;em&gt;source&lt;/em&gt; to each of the
 </span></span><span id="823" class="l"><span class="php-comment">     * &lt;em&gt;destinations&lt;/em&gt;
 </span></span><span id="824" class="l"><span class="php-comment">     *
 </span></span><span id="825" class="l"><span class="php-comment">     * @param string $key the field name
-</span></span><span id="826" class="l"><span class="php-comment">     * @param integer $source the source record
-</span></span><span id="827" class="l"><span class="php-comment">     * @param integer $destination the destination record
-</span></span><span id="828" class="l"><span class="php-comment">     * @param array $destinations the destination records
+</span></span><span id="826" class="l"><span class="php-comment">     * @param integer $destination the destination record
+</span></span><span id="827" class="l"><span class="php-comment">     * @param array $destinations the destination records
+</span></span><span id="828" class="l"><span class="php-comment">     * @param integer $source the source record
 </span></span><span id="829" class="l"><span class="php-comment">     * @return boolean|array return boolean or an associative array
 </span></span><span id="830" class="l"><span class="php-comment">     * associating the ids for each of the &lt;em&gt;destinations&lt;/em&gt; to a boolean
 </span></span><span id="831" class="l"><span class="php-comment">     * that indicates whether the link was successfully added.
@@ -1266,13 +1266,13 @@
 </span></span><span id="1152" class="l"><span class="php-comment">     * &lt;em&gt;destination&lt;/em&gt; records.
 </span></span><span id="1153" class="l"><span class="php-comment">     *
 </span></span><span id="1154" class="l"><span class="php-comment">     * @api
-</span></span><span id="1155" class="l"><span class="php-comment">     ** &lt;strong&gt;unlink($key, $source, $destination)&lt;/strong&gt; - If it exists,
+</span></span><span id="1155" class="l"><span class="php-comment">     ** &lt;strong&gt;unlink($key, $destination, $source)&lt;/strong&gt; - If it exists,
 </span></span><span id="1156" class="l"><span class="php-comment">     * remove the link from {@code key} in &lt;em&gt;source&lt;/em&gt; to &lt;em&gt;destination
 </span></span><span id="1157" class="l"><span class="php-comment">     * &lt;/em&gt; and return &lt;em&gt;true&lt;/em&gt; if the link is removed.
 </span></span><span id="1158" class="l"><span class="php-comment">     *
 </span></span><span id="1159" class="l"><span class="php-comment">     * @param string $key the field name
-</span></span><span id="1160" class="l"><span class="php-comment">     * @param integer $source the source record
-</span></span><span id="1161" class="l"><span class="php-comment">     * @param integer $destination the destination record (required if
+</span></span><span id="1160" class="l"><span class="php-comment">     * @param integer $destination the destination record (required if
+</span></span><span id="1161" class="l"><span class="php-comment">     * @param integer $source the source record
 </span></span><span id="1162" class="l"><span class="php-comment">     *$destinations is unspecified)
 </span></span><span id="1163" class="l"><span class="php-comment">     * @return boolean
 </span></span><span id="1164" class="l"><span class="php-comment">     */</span>
